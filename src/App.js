@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import NavBar from "./Components/Navigation/NavBar";
+import LandingPage from "./Components/LandingPage";
+import Algo from "./Components/AlgoMenu/Algo";
+import ParticlesBg from "particles-bg";
+import Projects from './Components/Projects/Projects';
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+        <div style = {{height: "2000px"}}>
+        <NavBar />
+        <LandingPage />
+        <Algo />
+        <div style = {{height: "100%", width: "100%"}}>
+        <ParticlesBg color = "#3fd2c7"  type = "cobweb"  />
+        <Projects />
+        </div>
+        </div>
+
   );
-}
+};
 
 export default App;
