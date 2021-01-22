@@ -1,5 +1,6 @@
 import { makeStyles, Paper } from '@material-ui/core'
 import React from 'react'
+import LandingPage from '../Navigation/NavButtons';
 
 const algoStyles = makeStyles((theme) => ({
 
@@ -20,10 +21,14 @@ export default function Algo() {
     return (
         <div>
 
+           
+
             <Paper className = {classes.paper} elevation={3}>
 
 
             </Paper>
+
+            
 
 
             

@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardMedia,
   Collapse,
+  Divider,
   IconButton,
   makeStyles,
   Typography,
@@ -60,6 +61,7 @@ export default function ExpandButton() {
         <CardActions>
           <IconButton
             style={{ backgroundColor: "transparent" }}
+            disableRipple={true}
             className={clsx(classes.expand, {
               [classes.expandOpen]: expanded,
             })}
@@ -75,9 +77,12 @@ export default function ExpandButton() {
             A Complete Full Stack Application using the MERN stack. Includes
             complete user authentification, an API to keep track of user data,
             full CRUD capabilities, and completely responsive for mobile
-            <br></br>
-            <br></br>MongoDB<br></br>Express<br></br>React<br></br>Node.js
           </Typography>
+          <Divider />
+          <Typography className={classes.text}>MongoDB</Typography>
+          <Typography className={classes.text}>Express</Typography>
+          <Typography className={classes.text}>React</Typography>
+          <Typography className={classes.text}>Node.js</Typography>
         </Collapse>
       </Card>
     </div>

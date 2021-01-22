@@ -8,6 +8,7 @@ import {
   IconButton,
   makeStyles,
   Typography,
+  Divider,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
@@ -28,6 +29,9 @@ const expandStyles = makeStyles((theme) => ({
   card: {
     width: "300px",
   },
+  text: {
+    margin: "5px",
+  },
 }));
 
 export default function ProjectThree() {
@@ -44,7 +48,10 @@ export default function ProjectThree() {
   return (
     <div>
       <Card className={classes.card}>
-        <CardHeader />
+        <CardHeader
+          title="Relish"
+          subheader="An App to search and find recipes based on user preferences"
+        />
 
         <CardMedia className={classes.cardIMG} />
         <CardContent>
@@ -53,6 +60,7 @@ export default function ProjectThree() {
         <CardActions>
           <IconButton
             style={{ backgroundColor: "transparent" }}
+            disableRipple={true}
             className={clsx(classes.expand, {
               [classes.expandOpen]: expanded,
             })}
@@ -64,7 +72,16 @@ export default function ProjectThree() {
           </IconButton>
         </CardActions>
         <Collapse in={expanded}>
-          <Typography>Project Three</Typography>
+          <Typography className={classes.text}>
+            A Complete Full Stack Application using the MERN stack. Includes
+            complete user authentification, an API to keep track of user data,
+            full CRUD capabilities, and completely responsive for mobile
+          </Typography>
+          <Divider />
+          <Typography className={classes.text}>MongoDB</Typography>
+          <Typography className={classes.text}>Express</Typography>
+          <Typography className={classes.text}>React</Typography>
+          <Typography className={classes.text}>Node.js</Typography>
         </Collapse>
       </Card>
     </div>

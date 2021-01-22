@@ -10,6 +10,7 @@ import { Divider, Drawer, List, ListItemText } from "@material-ui/core";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -63,13 +64,11 @@ const navStyles = makeStyles((theme) => ({
 
   navButton: {
     color: "white",
-
     visibility: "hidden",
   },
 
   navButtonAppear: {
     color: "#3fd2c7",
-
     visibility: "show",
   },
 }));
@@ -139,7 +138,7 @@ export default function NavBar({ navTheme }) {
   // handle setTheme
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id = "Top">
       <Paper>
         <AppBar
           elevation={0}
@@ -147,8 +146,20 @@ export default function NavBar({ navTheme }) {
           position="fixed"
         >
           <Toolbar>
-            <Button className={classes[navButtonRef.current]}>About</Button>
-            <Button className={classes[navButtonRef.current]}>Projects</Button>
+            <Button
+              component={Link}
+              to={"/#AboutMe"}
+              className={classes[navButtonRef.current]}
+            >
+              About
+            </Button>
+            <Button
+              component={Link}
+              to={"/#Projects"}
+              className={classes[navButtonRef.current]}
+            >
+              Projects
+            </Button>
             <Button className={classes[navButtonRef.current]}>Contact</Button>
 
             <div
