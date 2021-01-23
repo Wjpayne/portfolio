@@ -1,17 +1,23 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core"
+import { Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import Rotate from 'react-reveal/Rotate';
 
 const aboutMeStyles = makeStyles(() => ({
-
-
-}))
+  text: {
+    position: "relative",
+    textAlign: "center",
+    top: "40%"
+  },
+}));
 
 export default function AboutMe() {
-
-  const classes = aboutMeStyles()
+  const classes = aboutMeStyles();
   return (
     <div id="AboutMe" style={{ height: "1300px" }}>
-      About Me
+     
+      <Typography className={classes.text}>About meeeeeeeeeeeeeee</Typography>
+      
     </div>
   );
 }

@@ -28,7 +28,6 @@ const navStyles = makeStyles((theme) => ({
     display: "flex",
     float: "right",
     color: "#3fd2c7",
-
     fontSize: "50px",
   },
 
