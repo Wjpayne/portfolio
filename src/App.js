@@ -1,6 +1,6 @@
 import NavBar from "./Components/Navigation/NavBar";
-import LandingPage from "./Components/Navigation/NavButtons";
-import Algo from "./Components/AlgoMenu/Algo";
+
+import Menu from "./Components/Menu/Menu";
 import ParticlesBg from "particles-bg";
 import Projects from "./Components/Projects/Projects";
 import AboutMe from "./Components/AboutMe";
@@ -14,13 +14,14 @@ const App = () => {
       <BrowserRouter>
         <ScrollHandler />
         <NavBar />
-        <Algo />
+        <Menu />
         <div style={{ height: "1300px", width: "100%" }} bg="true">
-          <LandingPage />
+         
           <ParticlesBg color="#3fd2c7" type="cobweb" />
         </div>
         <AboutMe />
         <Projects />
+
         <ScrollTop />
       </BrowserRouter>
     </div>

@@ -27,7 +27,7 @@ const navStyles = makeStyles((theme) => ({
   menuButton: {
     display: "flex",
     float: "right",
-    color: "#3fd2c7",
+    color: "#2565ae",
     fontSize: "50px",
   },
 
@@ -57,7 +57,7 @@ const navStyles = makeStyles((theme) => ({
   },
 
   appBarBlack: {
-    backgroundColor: "#e1f2f7",
+    backgroundColor: "transparent",
     transition: ".5s",
   },
 
@@ -67,7 +67,7 @@ const navStyles = makeStyles((theme) => ({
   },
 
   navButtonAppear: {
-    color: "#3fd2c7",
+    color: "#2565ae",
     visibility: "show",
   },
 }));
