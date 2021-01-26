@@ -7,24 +7,47 @@ import AboutMe from "./Components/AboutMe";
 import { BrowserRouter } from "react-router-dom";
 import ScrollHandler from "./Components/Navigation/ScrollHandler";
 import ScrollTop from "./Components/Navigation/ScrollTop";
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Montserrat',
+    ].join(','),
+  },
+
+  button: {
+    fontFamily: [
+      'Montserrat',
+      "Subrayada"
+    ].join(','),
+  },
+
+});
+
+
+
 
 const App = () => {
+  
   return (
-    <div style={{ height: "100%" }}>
+    <ThemeProvider theme={theme}>
+    <div style={{ height: "3500px" }}>
       <BrowserRouter>
         <ScrollHandler />
         <NavBar />
         <Menu />
-        <div style={{ height: "1300px", width: "100%" }} bg="true">
+        <div style={{ height: "1300px", width: "100%" }} >
          
-          <ParticlesBg color="#3fd2c7" type="cobweb" />
+          <ParticlesBg color="#3fd2c7" type="cobweb" num ="50" bg="true"/>
         </div>
         <AboutMe />
         <Projects />
-
         <ScrollTop />
       </BrowserRouter>
     </div>
+    </ThemeProvider>
   );
 };
 

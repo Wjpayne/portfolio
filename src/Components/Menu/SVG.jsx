@@ -45,7 +45,7 @@ export default class SVG extends Component {
             className="container"
           >
             <Link to="/#Projects">
-              <g className="house" id="house-one" transform="translate(234)">
+              <g className="house" id="house-one" transform="translate(380)">
                 <g id="bg-fill-7" className="bg-fill">
                   <path
                     fill="#b6d788"
@@ -93,7 +93,7 @@ export default class SVG extends Component {
                 <path fill="#333" d="M399.22 300.97h1.9-2z" />
               </g>
             </g>
-            <g className="house" id="house-four">
+            <g className="house" id="house-four" transform="translate(-170)">
               <g id="bg-fill-4" className="bg-fill">
                 <path
                   fill="#e4982f"

@@ -32,6 +32,9 @@ const expandStyles = makeStyles((theme) => ({
   text: {
     margin: "5px",
   },
+  cardIMG: {
+    height: "200px"
+  }
 }));
 
 export default function ProjectThree() {
@@ -50,7 +53,7 @@ export default function ProjectThree() {
       <Card className={classes.card}>
         <CardHeader
           title="Relish"
-          subheader="An App to search and find recipes based on user preferences"
+          subheader="An App to search, find, and save recipes"
         />
 
         <CardMedia className={classes.cardIMG} />

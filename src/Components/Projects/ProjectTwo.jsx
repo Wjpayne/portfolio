@@ -32,6 +32,9 @@ const expandStyles = makeStyles((theme) => ({
   text: {
     margin: "5px",
   },
+  cardIMG: {
+    height: "200px"
+  }
 }));
 
 export default function ProjectTwo() {

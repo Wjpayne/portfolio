@@ -69,10 +69,12 @@ const navStyles = makeStyles((theme) => ({
   navButtonAppear: {
     color: "#2565ae",
     visibility: "show",
+    fontFamily: "Montserrat Subrayada",
+    fontSize: "20px"
   },
 }));
 
-export default function NavBar({ navTheme }) {
+export default function NavBar() {
   //styling
   const classes = navStyles();
 
