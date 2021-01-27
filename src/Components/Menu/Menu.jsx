@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import SVG from "./SVG";
 import "./index.css";
 
-const algoStyles = makeStyles((theme) => ({
+const menuStyles = makeStyles((theme) => ({
   paper: {
     width: "1200px",
     height: "700px",
@@ -11,13 +11,7 @@ const algoStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%)",
     top: "400px",
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-      height: "100%",
-
-    },
   },
-  
 
   game: {
     fontFamily: "Orbitron",
@@ -64,7 +58,28 @@ const algoStyles = makeStyles((theme) => ({
 
   aboutRotate: {
     left: "447px",
+    transition: "1s",
     transform: "rotate(90deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    color: "#2565ae",
+  },
+
+  aboutRotateTwo: {
+    left: "447px",
+    transition: "1s",
+    transform: "rotate(100deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    color: "#2565ae",
+  },
+
+  aboutRotateThree: {
+    left: "447px",
+    transition: "1s",
+    transform: "rotate(80deg)",
     transformOrigin: "0 50%",
     top: "415px",
     position: "absolute",
@@ -78,6 +93,27 @@ const algoStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "625px",
     color: "#2565ae",
+    transition: "1s",
+  },
+
+  projectRotateTwo: {
+    transform: "rotate(100deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "625px",
+    color: "#2565ae",
+    transition: "1s",
+  },
+
+  projectRotateThree: {
+    transform: "rotate(80deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "625px",
+    color: "#2565ae",
+    transition: "1s",
   },
 
   resumeRotate: {
@@ -87,6 +123,27 @@ const algoStyles = makeStyles((theme) => ({
     color: "#2565ae",
     transform: "rotate(90deg)",
     transformOrigin: "0 50%",
+    transition: "1s",
+  },
+
+  resumeRotateTwo: {
+    transform: "rotate(100deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "828px",
+    color: "#2565ae",
+    transition: "1s",
+  },
+
+  resumeRotateThree: {
+    transform: "rotate(80deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "828px",
+    color: "#2565ae",
+    transition: "1s",
   },
 
   contactRotate: {
@@ -96,6 +153,27 @@ const algoStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "1025px",
     color: "#2565ae",
+    transition: "1s",
+  },
+
+  contactRotateTwo: {
+    transform: "rotate(100deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "1025px",
+    color: "#2565ae",
+    transition: "1s",
+  },
+
+  contactRotateThree: {
+    transform: "rotate(80deg)",
+    transformOrigin: "0 50%",
+    top: "415px",
+    position: "absolute",
+    left: "1025px",
+    color: "#2565ae",
+    transition: "1s",
   },
 
   text: {
@@ -109,8 +187,8 @@ const algoStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Algo() {
-  const classes = algoStyles();
+export default function Menu() {
+  const classes = menuStyles();
 
   //set state for render
 
@@ -154,11 +232,22 @@ export default function Algo() {
   useEffect(() => {
     setTimeout(() => {
       setAbout(true);
-    }, 1000);
+    }, 700);
 
     setTimeout(() => {
       setAboutMove("aboutRotate");
+    }, 1000);
+
+    setTimeout(() => {
+      setAboutMove("aboutRotateTwo");
     }, 1500);
+    setTimeout(() => {
+      setAboutMove("aboutRotateThree");
+    }, 2000);
+
+    setTimeout(() => {
+      setAboutMove("aboutRotate");
+    }, 2500);
   }, []);
 
   //set timing for project
@@ -166,11 +255,20 @@ export default function Algo() {
   useEffect(() => {
     setTimeout(() => {
       setProject(true);
-    }, 1500);
+    }, 1200);
 
     setTimeout(() => {
       setProjectMove("projectRotate");
+    }, 1500);
+    setTimeout(() => {
+      setProjectMove("projectRotateTwo");
     }, 2000);
+    setTimeout(() => {
+      setProjectMove("projectRotateThree");
+    }, 2500);
+    setTimeout(() => {
+      setProjectMove("projectRotate");
+    }, 3000);
   }, []);
 
   //set Timing for resume
@@ -178,11 +276,20 @@ export default function Algo() {
   useEffect(() => {
     setTimeout(() => {
       setResume(true);
-    }, 2500);
+    }, 1700);
 
     setTimeout(() => {
       setResumeMove("resumeRotate");
-    }, 3200);
+    }, 2000);
+    setTimeout(() => {
+      setResumeMove("resumeRotateTwo");
+    }, 2500);
+    setTimeout(() => {
+      setResumeMove("resumeRotateThree");
+    }, 3000);
+    setTimeout(() => {
+      setResumeMove("resumeRotate");
+    }, 3500);
   }, []);
 
   //set timing for contact
@@ -194,7 +301,18 @@ export default function Algo() {
 
     setTimeout(() => {
       setContactMove("contactRotate");
-    }, 2500);
+    }, 2300);
+
+    setTimeout(() => {
+      setContactMove("contactRotateTwo");
+    }, 2700);
+
+    setTimeout(() => {
+      setContactMove("contactRotateThree");
+    }, 3200);
+    setTimeout(() => {
+      setContactMove("contactRotate");
+    }, 3700);
   }, []);
 
   //parralex
