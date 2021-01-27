@@ -13,6 +13,8 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
+import ProjectOneCarousel from './CarouselProjectOne';
+
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -27,18 +29,30 @@ const expandStyles = makeStyles((theme) => ({
   },
 
   card: {
-    width: "300px",
+    width: "400px",
   },
 
   text: {
     margin: "5px",
   },
   cardIMG: {
-    height: "200px"
+    height: "200px",
+  },
+
+  content: {
+
+    marginTop: "70px",
+    
+  },
+
+  link: {
+    color: "black"
   }
 }));
 
-export default function ExpandButton() {
+
+
+  export default function Projects() {
   const classes = expandStyles();
 
   //set State for expand
@@ -54,14 +68,17 @@ export default function ExpandButton() {
       <Card className={classes.card}>
         <CardHeader
           title="The Blast Beat"
-          subheader="An App to curate your record collection"
+          subheader="An App to curate and share your record collection"
         />
+        <CardMedia className = {classes.cardIMG} component = {ProjectOneCarousel}>
+        
+           
+         
+        </CardMedia>
 
-        <CardMedia className={classes.cardIMG} />
-        <CardContent>
-          <Typography></Typography>
-        </CardContent>
+        <CardContent className= {classes.content}>Check out the live project <a className = {classes.link}target = "blank" href = "https://theblastbeat.herokuapp.com/">here</a></CardContent>
         <CardActions>
+        
           <IconButton
             style={{ backgroundColor: "transparent" }}
             disableRipple={true}
@@ -72,6 +89,7 @@ export default function ExpandButton() {
             aria-expanded={expanded}
             aria-label="show more"
           >
+          
             <ExpandMore />
           </IconButton>
         </CardActions>

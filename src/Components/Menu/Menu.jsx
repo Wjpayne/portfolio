@@ -14,14 +14,16 @@ const algoStyles = makeStyles((theme) => ({
   },
 
   game: {
-    left: "220px",
+    fontFamily: "Orbitron",
+    left: "210px",
     top: "415px",
     position: "absolute",
     color: "#2565ae",
   },
 
   secondGame: {
-    left: "235px",
+    fontFamily: "Orbitron",
+    left: "225px",
     top: "445px",
     position: "absolute",
     color: "#2565ae",
@@ -43,7 +45,7 @@ const algoStyles = makeStyles((theme) => ({
   resume: {
     top: "415px",
     position: "absolute",
-    left: "785px",
+    left: "828px",
     color: "#2565ae",
   },
 
@@ -54,20 +56,6 @@ const algoStyles = makeStyles((theme) => ({
     color: "#2565ae",
   },
 
-  gameRotate: {
-    left: "220px",
-    transformOrigin: "0 50%",
-    top: "415px",
-    position: "absolute",
-    color: "#2565ae",
-  },
-  secondGameRotate: {
-    left: "235px",
-    transformOrigin: "0 50%",
-    top: "435px",
-    position: "absolute",
-    color: "#2565ae",
-  },
 
   aboutRotate: {
     left: "447px",
@@ -90,7 +78,7 @@ const algoStyles = makeStyles((theme) => ({
   resumeRotate: {
     top: "415px",
     position: "absolute",
-    left: "785px",
+    left: "828px",
     color: "#2565ae",
     transform: "rotate(90deg)",
     transformOrigin: "0 50%",
@@ -109,6 +97,9 @@ const algoStyles = makeStyles((theme) => ({
     fontSize: "30px",
   },
   gameText: {
+    fontSize: "17px",
+  },
+  secondGameText: {
     fontSize: "17px",
   },
 }));
@@ -130,39 +121,28 @@ export default function Algo() {
   const [projectMove, setProjectMove] = useState("project");
   const [resumeMove, setResumeMove] = useState("resume");
   const [contactMove, setContactMove] = useState("contact");
-  // const [gameMove, setGameMove] = useState("game")
-  // const [gameSecondMove, setSecondGameMove] = useState("game")
 
   const aboutRef = useRef();
   const projectRef = useRef();
   const resumeRef = useRef();
   const contactRef = useRef();
-  // const gameRef = useRef();
-  // const secondGameRef = useRef();
 
   aboutRef.current = aboutMove;
   projectRef.current = projectMove;
   resumeRef.current = resumeMove;
   contactRef.current = contactMove;
-  // gameRef.current = gameMove
-  // secondGameRef.current = gameSecondMove
 
   // set timing for game
   useEffect(() => {
-
-
     setInterval(() => {
       setGame(true);
-    }, 1000);
-
+    }, 2000);
   }, []);
 
   useEffect(() => {
     setInterval(() => {
       setGame(false);
-    }, 2000);
-
-
+    }, 4000);
   }, []);
 
   //set timing of about
@@ -221,13 +201,13 @@ export default function Algo() {
 
         <div className={classes.game}>
           <Fade in={game} timeout={1000}>
-            <Typography className={classes.gameText}>Wanna play</Typography>
+            <h1 className={classes.gameText}>Wanna play</h1>
           </Fade>
         </div>
 
         <div className={classes.secondGame}>
           <Fade in={game} timeout={500}>
-            <Typography className={classes.secondGameText}>a game?</Typography>
+            <h1 className={classes.secondGameText}>a game?</h1>
           </Fade>
         </div>
 

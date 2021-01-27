@@ -13,6 +13,7 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
+import CarouselProjectThree from "./CarouselProjectThree";
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -27,14 +28,22 @@ const expandStyles = makeStyles((theme) => ({
   },
 
   card: {
-    width: "300px",
+    width: "400px",
   },
   text: {
     margin: "5px",
   },
   cardIMG: {
-    height: "200px"
-  }
+    height: "200px",
+  },
+
+  content: {
+    marginTop: "70px",
+  },
+
+  link: {
+    color: "black",
+  },
 }));
 
 export default function ProjectThree() {
@@ -53,12 +62,22 @@ export default function ProjectThree() {
       <Card className={classes.card}>
         <CardHeader
           title="Relish"
-          subheader="An App to search, find, and save recipes"
+          subheader="An App to search, find, and save recipes bases on user preference"
         />
 
-        <CardMedia className={classes.cardIMG} />
-        <CardContent>
-          <Typography></Typography>
+        <CardMedia
+          className={classes.cardIMG}
+          component={CarouselProjectThree}
+        />
+        <CardContent className={classes.content}>
+          Check out the live project{" "}
+          <a
+            className={classes.link}
+            target="blank"
+            href="https://theblastbeat.herokuapp.com/"
+          >
+            here
+          </a>
         </CardContent>
         <CardActions>
           <IconButton
