@@ -34,7 +34,7 @@ const expandStyles = makeStyles((theme) => ({
     margin: "5px",
   },
   cardIMG: {
-    height: "200px",
+    height: "225px",
   },
 
   content: {
