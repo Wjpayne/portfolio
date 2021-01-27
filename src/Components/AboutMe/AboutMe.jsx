@@ -11,7 +11,7 @@ const aboutMeStyles = makeStyles(() => ({
     position: "relative",
     transition: "1s",
     textAlign: "center",
-    top: "40%",
+    top: "40%"
   
   },
 
