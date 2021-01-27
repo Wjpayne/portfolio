@@ -13,8 +13,7 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
-import ProjectOneCarousel from './CarouselProjectOne';
-
+import ProjectOneCarousel from "./CarouselProjectOne";
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -40,19 +39,18 @@ const expandStyles = makeStyles((theme) => ({
   },
 
   content: {
-
     marginTop: "70px",
-    
   },
 
   link: {
-    color: "black"
-  }
+    color: "black",
+  },
+  title: {
+    color: "#2565ae",
+  },
 }));
 
-
-
-  export default function Projects() {
+export default function Projects() {
   const classes = expandStyles();
 
   //set State for expand
@@ -67,18 +65,26 @@ const expandStyles = makeStyles((theme) => ({
     <div>
       <Card className={classes.card}>
         <CardHeader
+        className={classes.title}
           title="The Blast Beat"
           subheader="An App to curate and share your record collection"
         />
-        <CardMedia className = {classes.cardIMG} component = {ProjectOneCarousel}>
-        
-           
-         
-        </CardMedia>
+        <CardMedia
+          className={classes.cardIMG}
+          component={ProjectOneCarousel}
+        ></CardMedia>
 
-        <CardContent className= {classes.content}>Check out the live project <a className = {classes.link}target = "blank" href = "https://theblastbeat.herokuapp.com/">here</a></CardContent>
+        <CardContent className={classes.content}>
+          Check out the live project{" "}
+          <a
+            className={classes.link}
+            target="blank"
+            href="https://theblastbeat.herokuapp.com/"
+          >
+            here
+          </a>
+        </CardContent>
         <CardActions>
-        
           <IconButton
             style={{ backgroundColor: "transparent" }}
             disableRipple={true}
@@ -89,7 +95,6 @@ const expandStyles = makeStyles((theme) => ({
             aria-expanded={expanded}
             aria-label="show more"
           >
-          
             <ExpandMore />
           </IconButton>
         </CardActions>

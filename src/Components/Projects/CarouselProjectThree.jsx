@@ -1,29 +1,26 @@
 
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import Tutorial from "./Images/tutorial.png"
-import Tutorial2 from "./Images/tutorial2.png"
-import Map from "./Images/map.png"
-import Map2 from "./Images/map2.png"
-import Map3 from "./Images/map3.png"
+import Recipe from "./Images/recipeapp.png"
+import Login from "./Images/longinrecipe.png"
+import Search from "./Images/searchrecipe.png"
+import Ingredients from "./Images/ingredients.png"
 
-export default function ProjectTwoCarousel() {
+export default function ProjectThreeCarousel() {
   const items = [
     {
-      image: Tutorial,
+      image: Recipe,
     },
     {
-      image: Tutorial2,
+      image: Login,
     },
     {
-      image: Map,
+      image: Search,
     },
     {
-        image: Map2,
+        image: Ingredients,
       },
-      {
-        image: Map3,
-      },
+
   ];
 
   return (

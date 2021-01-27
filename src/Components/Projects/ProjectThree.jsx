@@ -44,6 +44,9 @@ const expandStyles = makeStyles((theme) => ({
   link: {
     color: "black",
   },
+  title: {
+    color: "#2565ae",
+  },
 }));
 
 export default function ProjectThree() {
@@ -61,6 +64,7 @@ export default function ProjectThree() {
     <div>
       <Card className={classes.card}>
         <CardHeader
+        className={classes.title}
           title="Relish"
           subheader="An App to search, find, and save recipes bases on user preference"
         />

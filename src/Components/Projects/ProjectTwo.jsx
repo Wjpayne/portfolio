@@ -37,15 +37,16 @@ const expandStyles = makeStyles((theme) => ({
     height: "200px",
   },
   content: {
-
     marginTop: "70px",
-    
   },
 
   link: {
-    color: "black"
-  }
- 
+    color: "black",
+  },
+
+  title: {
+    color: "#2565ae",
+  },
 }));
 
 export default function ProjectTwo() {
@@ -63,6 +64,7 @@ export default function ProjectTwo() {
     <div>
       <Card className={classes.card}>
         <CardHeader
+          className={classes.title}
           title="Path Visualizer"
           subheader="A Web App that let's you have a little fun with algorithms"
         />
@@ -74,7 +76,7 @@ export default function ProjectTwo() {
           <a
             className={classes.link}
             target="blank"
-            href="https://theblastbeat.herokuapp.com/"
+            href="https://path-visualization.herokuapp.com/"
           >
             here
           </a>
@@ -95,9 +97,10 @@ export default function ProjectTwo() {
         </CardActions>
         <Collapse in={expanded}>
           <Typography className={classes.text}>
-            A complete Front End Web App to visualize Dijkstra's Algorithm in a
-            game like enviornment. Allows to set walls anywhere on the map and
-            see how the algorithm works based on user input
+            A complete Front End Web Application to visualize Dijkstra's
+            Algorithm in a game like enviornment. Allows to set walls anywhere
+            on the map and see how the algorithm works based on user input. This
+            a web based App and non responsive
           </Typography>
           <Divider />
           <Typography className={classes.text}>React</Typography>

@@ -161,6 +161,7 @@ export default function NavBar() {
             >
               Projects
             </Button>
+            <Button className={classes[navButtonRef.current]}>Resume</Button>
             <Button className={classes[navButtonRef.current]}>Contact</Button>
 
             <div
@@ -194,15 +195,15 @@ export default function NavBar() {
           </div>
           <List>
             <ListItem button>
-              <ListItemText className={classes.title}>Portfolio</ListItemText>
-            </ListItem>
-            <Divider />
-            <ListItem button>
-              <ListItemText color="inherit">About</ListItemText>
+              <ListItemText className={classes.title}>About</ListItemText>
             </ListItem>
             <Divider />
             <ListItem button>
               <ListItemText color="inherit">Projects</ListItemText>
+            </ListItem>
+            <Divider />
+            <ListItem button>
+              <ListItemText color="inherit">Resume</ListItemText>
             </ListItem>
             <Divider />
             <ListItem button>

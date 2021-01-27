@@ -6,8 +6,8 @@ import ProjectThree from "./ProjectThree";
 
 export default function Projects() {
   return (
-    <div id="Projects" style={{ height: "700px" }}>
-      <Grid  container justify="center" direction="row" spacing={8}>
+    <div id="Projects" style={{ height: "700px", marginBottom: "300px" }}>
+      <Grid container justify="center" direction="row" spacing={8}>
         <Grid item>
           <ProjectOne />
         </Grid>

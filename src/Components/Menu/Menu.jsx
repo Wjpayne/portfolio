@@ -11,7 +11,13 @@ const algoStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%)",
     top: "400px",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: "100%",
+
+    },
   },
+  
 
   game: {
     fontFamily: "Orbitron",
@@ -55,7 +61,6 @@ const algoStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
   },
-
 
   aboutRotate: {
     left: "447px",
