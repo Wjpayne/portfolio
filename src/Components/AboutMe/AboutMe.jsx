@@ -103,8 +103,8 @@ export default function AboutMe() {
       <Typography className={classes[textRef.current]}>A full stack engineer with a focus</Typography>
       <Typography className={classes[textRef.current]}>on front end development</Typography>
       <br></br>
-      <Typography className={classes[textRef.current]}>Proficient in React.JS, Redux,</Typography>
-      <Typography className={classes[textRef.current]}>Node.JS, and the MERN stack</Typography>
+      <Typography className={classes[textRef.current]}>Proficient in React.JS, Redux, MERN stack,</Typography>
+      <Typography className={classes[textRef.current]}>Node.JS, Javascript, HTML, and CSS.</Typography>
       
     </div>
     </>
