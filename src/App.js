@@ -34,7 +34,6 @@ const App = () => {
           <NavBar />
           <Menu />
           <AboutMe />
-
           <Projects />
           <Contact />
           <ScrollTop />

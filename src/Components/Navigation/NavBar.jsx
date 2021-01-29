@@ -22,6 +22,7 @@ const navStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     fontSize: "50",
+    color: "#2565ae",
   },
 
   menuButton: {
@@ -70,7 +71,7 @@ const navStyles = makeStyles((theme) => ({
     color: "#2565ae",
     visibility: "show",
     fontFamily: "Montserrat Subrayada",
-    fontSize: "20px"
+    fontSize: "20px",
   },
 }));
 
@@ -103,6 +104,8 @@ export default function NavBar() {
 
   navRef.current = navBackground;
   navButtonRef.current = navButton;
+
+  //handle scroll for appearing on scroll
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,7 +142,7 @@ export default function NavBar() {
   // handle setTheme
 
   return (
-    <div className={classes.root} id = "Top">
+    <div className={classes.root}>
       <Paper>
         <AppBar
           elevation={0}
@@ -162,12 +165,21 @@ export default function NavBar() {
               Projects
             </Button>
             <Button className={classes[navButtonRef.current]}>Resume</Button>
-            <Button component = {Link} to = {"/#Contact"} className={classes[navButtonRef.current]}>Contact</Button>
+            <Button
+              component={Link}
+              to={"/#Contact"}
+              className={classes[navButtonRef.current]}
+            >
+              Contact
+            </Button>
+
+            {/* Drawer Component */}
 
             <div
               style={{
                 marginLeft: "auto",
               }}
+              id="Top"
             >
               <IconButton onClick={handleDrawer} aria-label="menu">
                 <MenuIcon className={classes.menuButton} anchor="right" />
@@ -194,20 +206,20 @@ export default function NavBar() {
             </IconButton>
           </div>
           <List>
-            <ListItem button>
+            <ListItem component={Link} to={"/#AboutMe"} button>
               <ListItemText className={classes.title}>About</ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button>
-              <ListItemText color="inherit">Projects</ListItemText>
+            <ListItem component={Link} to={"/#Projects"} button>
+              <ListItemText className={classes.title}>Projects</ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button>
-              <ListItemText color="inherit">Resume</ListItemText>
+            <ListItem  button>
+              <ListItemText className={classes.title}>Resume</ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button>
-              <ListItemText color="inherit">Contact</ListItemText>
+            <ListItem component={Link} to={"/#Contact"} button>
+              <ListItemText  className={classes.title}>Contact</ListItemText>
             </ListItem>
           </List>
         </Drawer>

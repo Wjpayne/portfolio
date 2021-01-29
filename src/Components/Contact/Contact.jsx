@@ -28,7 +28,7 @@ export default class MyForm extends React.Component {
           
           <input type="text" placeholder = "Name" name="Name" style = {{margin: "10px", height: "25px", width: "200px", borderRadius: "5px", outline: "none"}}/>
 
-          <textarea type="text"  name="Message" style = {{ margin: "10px", height: "200px", width: "430px", borderRadius: "5px", outline: "none", resize: "none"}}/>
+          <textarea type="text"  name="Message" style = {{ margin: "10px", height: "200px", width: "430px", borderRadius: "5px", outline: "none", resize: "none", borderStyle: "inset", borderWidth: "2px"}}/>
           {status === "SUCCESS" ? <Typography style = {{ position: "absolute", bottom: "20px", left: "50%", transform: "translate(-50%)"}}>Thanks!</Typography>  : <Button style = {{ position: "relative", top: "20px", left: "50%", transform: "translate(-50%)"}} type = "submit" >Submit</Button>}
           {status === "ERROR" && <p style = {{ position: "absolute", bottom: "-5px", left: "50%", transform: "translate(-50%)", color: "red"}}>Ooops! There was an error.</p>}
         </form>

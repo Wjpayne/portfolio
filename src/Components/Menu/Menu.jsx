@@ -322,7 +322,7 @@ export default function Menu() {
       <Paper className={classes.paper} elevation={3}>
         <SVG />
 
-        <div className={classes.game}>
+        <div  className={classes.game}>
           <Fade in={game} timeout={1000}>
             <h1 className={classes.gameText}>Wanna play</h1>
           </Fade>
