@@ -11,7 +11,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%)",
     top: "400px",
-  },
+    [theme.breakpoints.down('lg')]: {
+      top: "200px",
+  }
+},
 
   game: {
     fontFamily: "Orbitron",
