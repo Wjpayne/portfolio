@@ -1,4 +1,4 @@
-import { Button, Paper, Typography } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import React from "react"
 
 //email form for my contact
@@ -24,7 +24,7 @@ export default class MyForm extends React.Component {
           method="POST"
         > 
           
-          <input type = "text" placeholder = "Email" style = {{margin: "10px", height: "25px", width: "200px", borderRadius: "5px", outline: "none"}} type="email" name="email" />
+          <input placeholder = "Email" style = {{margin: "10px", height: "25px", width: "200px", borderRadius: "5px", outline: "none"}} type="Email" name="Email" />
           
           <input type="text" placeholder = "Name" name="Name" style = {{margin: "10px", height: "25px", width: "200px", borderRadius: "5px", outline: "none"}}/>
 
