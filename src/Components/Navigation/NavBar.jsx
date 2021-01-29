@@ -72,6 +72,7 @@ const navStyles = makeStyles((theme) => ({
     visibility: "show",
     fontFamily: "Montserrat Subrayada",
     fontSize: "20px",
+    transition: ".7s",
   },
 }));
 

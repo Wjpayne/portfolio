@@ -8,7 +8,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     position: "relative",
     transition: "1s",
     textAlign: "center",
-    top: "40%",
+    top: "30%",
   },
 
   nameAppear: {
@@ -16,7 +16,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     position: "relative",
     textAlign: "center",
     transition: "1s",
-    top: "40%",
+    top: "30%",
     fontSize: "50px",
   },
 
@@ -24,7 +24,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     fontSize: "20px",
     position: "relative",
     textAlign: "center",
-    top: "40%",
+    top: "30%",
     opacity: "0",
     transition: "3s",
   },
@@ -33,16 +33,17 @@ const aboutMeStyles = makeStyles((theme) => ({
     fontSize: "20px",
     position: "relative",
     textAlign: "center",
-    top: "40%",
+    top: "30%",
     opacity: "1",
     transition: "3s",
   },
 
   div: {
-    height: "1000px",
+    height: "1300px",
     top: "80%",
     [theme.breakpoints.down("lg")]: {
-      height: "1000px",
+      height: "800px",
+      top: "50%"
     },
   },
 }));
@@ -94,8 +95,9 @@ export default function AboutMe() {
   }, []);
   return (
     <>
-      <div id="AboutMe" className={classes.div}>
-        <Typography className={classes[nameRef.current]}>
+    <div >
+      <div  id = "AboutMe" className={classes.div}>
+        <Typography  className={classes[nameRef.current]}>
           HI I'M WILLIAM
         </Typography>
         <br></br>
@@ -112,6 +114,7 @@ export default function AboutMe() {
         <Typography className={classes[textRef.current]}>
           Node.JS, Javascript, HTML, and CSS.
         </Typography>
+      </div>
       </div>
     </>
   );

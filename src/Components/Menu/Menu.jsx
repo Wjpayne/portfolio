@@ -12,7 +12,7 @@ const menuStyles = makeStyles((theme) => ({
     transform: "translate(-50%)",
     top: "400px",
     [theme.breakpoints.down("lg")]: {
-      top: "200px",
+      top: "100px",
       width: "900px",
       height: "500px",
     },
@@ -61,7 +61,6 @@ const menuStyles = makeStyles((theme) => ({
       left: "465px",
       top: "320px",
     },
-    
   },
 
   resume: {
