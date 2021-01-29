@@ -12,7 +12,12 @@ const projectStyles = makeStyles((theme) => ({
     top: "200px",
     [theme.breakpoints.down("lg")]: {
       position: "relative",
-      top: "400px",
+      top: "200px",
+    },
+
+    [theme.breakpoints.down("md")]: {
+      position: "relative",
+      top: "200px",
     },
   },
 }));

@@ -34,9 +34,7 @@ const expandStyles = makeStyles((theme) => ({
   text: {
     margin: "5px",
   },
-  cardIMG: {
-    height: "225px",
-  },
+
 
   content: {
     marginTop: "70px",
@@ -65,7 +63,7 @@ export default function Projects() {
     <div>
       <Card className={classes.card}>
         <CardHeader
-        className={classes.title}
+          className={classes.title}
           title="The Blast Beat"
           subheader="An App to curate and share your record collection"
         />
