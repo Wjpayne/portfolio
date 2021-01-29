@@ -6,11 +6,12 @@ import ListItem from "@material-ui/core/ListItem";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Divider, Drawer, List, ListItemText } from "@material-ui/core";
+import { Divider, Drawer, Hidden, List, ListItemText } from "@material-ui/core";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
+import { Visibility } from '@material-ui/icons';
 
 const drawerWidth = 240;
 
@@ -30,6 +31,7 @@ const navStyles = makeStyles((theme) => ({
     float: "right",
     color: "#2565ae",
     fontSize: "50px",
+
   },
 
   drawer: {
@@ -182,9 +184,11 @@ export default function NavBar() {
               }}
               id="Top"
             >
+              <Hidden smUp>
               <IconButton onClick={handleDrawer} aria-label="menu">
                 <MenuIcon className={classes.menuButton} anchor="right" />
               </IconButton>
+              </Hidden>
             </div>
           </Toolbar>
         </AppBar>
