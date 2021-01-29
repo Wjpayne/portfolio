@@ -1,11 +1,25 @@
+
+import { makeStyles } from '@material-ui/core';
 import React from 'react'
 import Particles from "react-particles-js";
 import "./particle.css"
 
+const particleStyles = makeStyles ((theme) => ({
+
+  div: {
+    height: "1400px",
+    [theme.breakpoints.down('lg')]: {
+      height: "1000px",
+  }
+}
+
+}))
+
 
 export default function ParticleMap() {
+  const classes = particleStyles()
     return (
-        <div style = {{height: "1400px"}}>
+        <div className = {classes.div}>
         <Particles
           id="particles-js"
           params={{

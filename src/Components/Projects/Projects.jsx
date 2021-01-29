@@ -8,13 +8,13 @@ export default function Projects() {
   return (
     <div id="Projects" style={{ height: "700px", marginBottom: "300px" }}>
       <Grid container justify="center" direction="row" spacing={8}>
-        <Grid item>
+        <Grid  item>
           <ProjectOne />
         </Grid>
-        <Grid item>
+        <Grid   item>
           <ProjectTwo />
         </Grid>
-        <Grid item>
+        <Grid  item>
           <ProjectThree />
         </Grid>
       </Grid>

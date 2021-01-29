@@ -3,7 +3,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
 
-const aboutMeStyles = makeStyles(() => ({
+const aboutMeStyles = makeStyles((theme) => ({
 
 
   name: {
@@ -42,6 +42,19 @@ const aboutMeStyles = makeStyles(() => ({
     transition: "3s"
   },
 
+  div: {
+
+
+    height: "1300px",
+    top: "80%",
+    [theme.breakpoints.down('lg')]: {
+      height: "1000px",
+      
+    },
+  },
+
+
+
 
 
 
@@ -64,7 +77,9 @@ export default function AboutMe() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 1100;
+   
+      const show = window.scrollY > 1200;
+
       if (show) {
         setName("nameAppear");
       } else {
@@ -97,7 +112,7 @@ export default function AboutMe() {
   }, [])
   return (
     <>
-     <div id = "AboutMe" style = {{height: "1300px", top: "80%"}}>
+     <div id = "AboutMe" className = {classes.div}>
       <Typography className={classes[nameRef.current]}>HI I'M WILLIAM</Typography>
       <br></br>
       <Typography className={classes[textRef.current]}>A full stack engineer with a focus</Typography>
