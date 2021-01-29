@@ -39,7 +39,7 @@ const aboutMeStyles = makeStyles((theme) => ({
   },
 
   div: {
-    height: "1300px",
+    height: "1000px",
     top: "80%",
     [theme.breakpoints.down("lg")]: {
       height: "1000px",
@@ -63,7 +63,7 @@ export default function AboutMe() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 1200;
+      const show = window.scrollY > 900;
 
       if (show) {
         setName("nameAppear");
@@ -80,7 +80,7 @@ export default function AboutMe() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 1100;
+      const show = window.scrollY > 900;
       if (show) {
         setText("textAppear");
       } else {

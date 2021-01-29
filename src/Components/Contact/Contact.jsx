@@ -15,7 +15,7 @@ export default class MyForm extends React.Component {
     render() {
       const { status } = this.state;
       return (
-          <div id = "Contact" style = {{height: "360px", width: "460px",  position: "absolute", left: "50%", transform: "translate(-50%)"}}>
+          <div id = "Contact" style = {{ width: "460px",  position: "relative", left: "50%", transform: "translate(-50%)", bottom: "-300px"}}>
               <Typography style = {{position: "absolute", top: "-40px", fontSize: "20px", left: "50%", transform: "translate(-50%)"}}>Contact Form</Typography>
         
         <form

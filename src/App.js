@@ -18,9 +18,9 @@ const theme = createMuiTheme({
 const appStyles = makeStyles((theme) =>({
 
   root: {
-    height: "4500px",
+    height: "4400px",
     [theme.breakpoints.down('lg')]: {
-      height: "3500px",
+      height: "3700px",
   }
   }
 }))
