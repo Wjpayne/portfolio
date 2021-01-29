@@ -12,15 +12,16 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
 
-
 const drawerWidth = 240;
 
 const navStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: "0",
-    overflow: "hidden",
- 
+    margin: "auto",
+    padding: "0",
+    [theme.breakpoints.down("xs")]: {
+      width: "200%",
+    },
   },
 
   title: {
@@ -30,11 +31,10 @@ const navStyles = makeStyles((theme) => ({
   },
 
   menuButton: {
-    display: "flex",
-    float: "right",
     color: "#2565ae",
-    fontSize: "50px",
-
+    fontSize: "40px",
+    position: "relative",
+    float: "right"
   },
 
   drawer: {
@@ -60,18 +60,22 @@ const navStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "white",
     transition: ".5s",
-    margin: "0",
-    overflow: "hidden"
-    
-    
+    margin: "auto",
+    padding: "0",
+    [theme.breakpoints.down("sm")]: {
+      visibility: "hidden",
+      backgroundColor: "transparent"
+      
+    },
   },
 
   appBarBlack: {
     backgroundColor: "transparent",
     transition: ".5s",
     margin: "0",
-    overflow: "hidden"
-
+    overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+    },
   },
 
   navButton: {
@@ -89,6 +93,9 @@ const navStyles = makeStyles((theme) => ({
     transition: ".7s",
     width: "100%",
     margin: "auto",
+    [theme.breakpoints.down("xs")]: {
+      visibility: "hidden",
+    },
   },
 }));
 
@@ -160,14 +167,8 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      
-      <Paper className = {classes.root}>
-      
-        <AppBar
-          elevation={0}
-          className={classes[navRef.current]}
-         
-        >
+      <Paper className={classes.root}>
+        <AppBar elevation={0} className={classes[navRef.current]}>
           <Toolbar>
             <Button
               component={Link}
@@ -191,22 +192,14 @@ export default function NavBar() {
             >
               Contact
             </Button>
-            
 
             {/* Drawer Component */}
 
-            <div
-              style={{
-                marginLeft: "auto",
-              }}
-              id="Top"
-            >
-              <Hidden smUp>
+            <Hidden smUp>
               <IconButton onClick={handleDrawer} aria-label="menu">
-                <MenuIcon className={classes.menuButton} anchor="right" />
+                <MenuIcon className={classes.menuButton} />
               </IconButton>
-              </Hidden>
-            </div>
+            </Hidden>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -236,12 +229,12 @@ export default function NavBar() {
               <ListItemText className={classes.title}>Projects</ListItemText>
             </ListItem>
             <Divider />
-            <ListItem  button>
+            <ListItem button>
               <ListItemText className={classes.title}>Resume</ListItemText>
             </ListItem>
             <Divider />
             <ListItem component={Link} to={"/#Contact"} button>
-              <ListItemText  className={classes.title}>Contact</ListItemText>
+              <ListItemText className={classes.title}>Contact</ListItemText>
             </ListItem>
           </List>
         </Drawer>

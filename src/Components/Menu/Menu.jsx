@@ -16,7 +16,15 @@ const menuStyles = makeStyles((theme) => ({
       width: "900px",
       height: "500px",
     },
+
+    [theme.breakpoints.down("xs")]: {
+      top: "100px",
+      width: "100%",
+      height: "240px",
+    },
   },
+
+  // game text and responsive attributes
 
   game: {
     fontFamily: "Orbitron",
@@ -27,6 +35,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "153px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "73px",
+      top: "140px",
     },
   },
 
@@ -40,7 +52,13 @@ const menuStyles = makeStyles((theme) => ({
       left: "170px",
       top: "345px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "80px",
+      top: "155px",
+    },
   },
+
+  // about text and responsive attributes
   about: {
     left: "447px",
     top: "415px",
@@ -50,38 +68,9 @@ const menuStyles = makeStyles((theme) => ({
       left: "340px",
       top: "320px",
     },
-  },
-
-  project: {
-    top: "415px",
-    position: "absolute",
-    left: "625px",
-    color: "#2565ae",
-    [theme.breakpoints.down("lg")]: {
-      left: "465px",
-      top: "320px",
-    },
-  },
-
-  resume: {
-    top: "415px",
-    position: "absolute",
-    left: "828px",
-    color: "#2565ae",
-    [theme.breakpoints.down("lg")]: {
-      left: "623px",
-      top: "320px",
-    },
-  },
-
-  contact: {
-    top: "415px",
-    position: "absolute",
-    left: "1025px",
-    color: "#2565ae",
-    [theme.breakpoints.down("lg")]: {
-      left: "768px",
-      top: "320px",
+    [theme.breakpoints.down("xs")]: {
+      left: "147px",
+      top: "140px",
     },
   },
 
@@ -97,6 +86,10 @@ const menuStyles = makeStyles((theme) => ({
       left: "340px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "147px",
+      top: "140px",
+    },
   },
 
   aboutRotateTwo: {
@@ -110,6 +103,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "340px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "147px",
+      top: "140px",
     },
   },
 
@@ -125,6 +122,27 @@ const menuStyles = makeStyles((theme) => ({
       left: "340px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "147px",
+      top: "140px",
+    },
+  },
+
+  //project text and responsive attributes
+
+  project: {
+    top: "415px",
+    position: "absolute",
+    left: "625px",
+    color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "465px",
+      top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "194px",
+      top: "140px",
+    },
   },
 
   projectRotate: {
@@ -138,6 +156,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "194px",
+      top: "140px",
     },
   },
 
@@ -153,6 +175,10 @@ const menuStyles = makeStyles((theme) => ({
       left: "465px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "194px",
+      top: "140px",
+    },
   },
 
   projectRotateThree: {
@@ -166,6 +192,27 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "194px",
+      top: "140px",
+    },
+  },
+
+  //resume text and responsive attributes
+
+  resume: {
+    top: "415px",
+    position: "absolute",
+    left: "828px",
+    color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "623px",
+      top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "249px",
+      top: "140px",
     },
   },
 
@@ -181,6 +228,10 @@ const menuStyles = makeStyles((theme) => ({
       left: "623px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "249px",
+      top: "140px",
+    },
   },
 
   resumeRotateTwo: {
@@ -194,6 +245,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "623px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "249px",
+      top: "140px",
     },
   },
 
@@ -209,8 +264,30 @@ const menuStyles = makeStyles((theme) => ({
       left: "623px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "249px",
+      top: "140px",
+    },
   },
 
+
+
+  //contact text and responsive attributes
+
+  contact: {
+    top: "415px",
+    position: "absolute",
+    left: "1025px",
+    color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "768px",
+      top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "302px",
+      top: "140px",
+    },
+  },
   contactRotate: {
     transform: "rotate(90deg)",
     transformOrigin: "0 50%",
@@ -223,6 +300,11 @@ const menuStyles = makeStyles((theme) => ({
       left: "768px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "302px",
+      top: "140px",
+    },
+    
   },
 
   contactRotateTwo: {
@@ -236,6 +318,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       left: "768px",
       top: "320px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "302px",
+      top: "140px",
     },
   },
 
@@ -251,6 +337,10 @@ const menuStyles = makeStyles((theme) => ({
       left: "768px",
       top: "320px",
     },
+    [theme.breakpoints.down("xs")]: {
+      left: "302px",
+      top: "140px",
+    },
   },
 
   text: {
@@ -258,17 +348,28 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       fontSize: "25px",
     },
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "15px",
+    },
   },
   gameText: {
     fontSize: "17px",
     [theme.breakpoints.down("lg")]: {
       fontSize: "14px",
     },
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "7px",
+    },
   },
   secondGameText: {
     fontSize: "17px",
     [theme.breakpoints.down("lg")]: {
       fontSize: "14px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "7px",
     },
   },
 }));

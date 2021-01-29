@@ -9,6 +9,12 @@ const aboutMeStyles = makeStyles((theme) => ({
     transition: "1s",
     textAlign: "center",
     top: "30%",
+    [theme.breakpoints.down("xs")]: {
+      top: "20%"
+    },
+    [theme.breakpoints.down("xs")]: {
+      
+    },
   },
 
   nameAppear: {
@@ -18,6 +24,9 @@ const aboutMeStyles = makeStyles((theme) => ({
     transition: "1s",
     top: "30%",
     fontSize: "50px",
+    [theme.breakpoints.down("xs")]: {
+      
+    },
   },
 
   text: {
@@ -27,6 +36,10 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "30%",
     opacity: "0",
     transition: "3s",
+    [theme.breakpoints.down("xs")]: {
+      
+    },
+
   },
 
   textAppear: {
@@ -36,6 +49,9 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "30%",
     opacity: "1",
     transition: "3s",
+    [theme.breakpoints.down("xs")]: {
+      
+    },
   },
 
   div: {
@@ -43,8 +59,15 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "80%",
     [theme.breakpoints.down("lg")]: {
       height: "800px",
-      top: "50%"
+      top: "20%"
     },
+    [theme.breakpoints.down("xs")]: {
+      height: "800px",
+      top: "20%"
+    
+
+    },
+
   },
 }));
 

@@ -5,10 +5,14 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import { BrowserRouter } from "react-router-dom";
 import ScrollHandler from "./Components/Navigation/ScrollHandler";
 import ScrollTop from "./Components/Navigation/ScrollTop";
-import { ThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/styles";
+import {
+  ThemeProvider,
+  createMuiTheme,
+  makeStyles,
+} from "@material-ui/core/styles";
 import Contact from "./Components/Contact/Contact";
 import Particles from "./Components/Particles/Particles";
-import "./index.css"
+import "./index.css";
 
 const theme = createMuiTheme({
   typography: {
@@ -16,28 +20,31 @@ const theme = createMuiTheme({
   },
 });
 
-const appStyles = makeStyles((theme) =>({
-
+const appStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     margin: "auto",
     height: "4400px",
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down("lg")]: {
       height: "3700px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "4500px",
+    },
+
+    [theme.breakpoints.down("xs")]: {
+      height: "4000px",
+    },
   },
-  [theme.breakpoints.down('sm')]: {
-    height: "4500px",
-}
-  }
-}))
+}));
 
 const App = () => {
-  const styles = appStyles()
+  const styles = appStyles();
   return (
     <ThemeProvider theme={theme}>
-      <div className={styles.root}>
-        <Particles />
-        <BrowserRouter>
+      <BrowserRouter>
+        <div className={styles.root}>
+          <Particles />
           <ScrollHandler />
           <NavBar />
           <Menu />
@@ -45,8 +52,8 @@ const App = () => {
           <Projects />
           <Contact />
           <ScrollTop />
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

@@ -10,7 +10,10 @@ const particleStyles = makeStyles ((theme) => ({
     height: "1400px",
     [theme.breakpoints.down('lg')]: {
       height: "1000px",
-  }
+  },
+  [theme.breakpoints.down('xs')]: {
+    height: "600px",
+}
 }
 
 }))

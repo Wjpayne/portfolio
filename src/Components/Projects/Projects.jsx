@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <div id = "Projects" >
     <div className={classes.div}>
-      <Grid  container justify="center" direction="row" spacing={3}>
+      <Grid  container justify="center" direction="row">
         <Grid item>
           <ProjectOne />
         </Grid>
