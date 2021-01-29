@@ -24,7 +24,10 @@ const appStyles = makeStyles((theme) =>({
     height: "4400px",
     [theme.breakpoints.down('lg')]: {
       height: "3700px",
-  }
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: "4500px",
+}
   }
 }))
 

@@ -20,6 +20,11 @@ const projectStyles = makeStyles((theme) => ({
       position: "relative",
       top: "100px",
     },
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      top: "100px",
+      height: "1400px"
+    },
   },
 
   
