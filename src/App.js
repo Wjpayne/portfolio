@@ -6,8 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollHandler from "./Components/Navigation/ScrollHandler";
 import ScrollTop from "./Components/Navigation/ScrollTop";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Contact from "./Components/Contact";
-import Particles from "./Components/Particles";
+import Contact from "./Components/Contact/Contact";
+import Particles from "./Components/Particles/Particles";
 
 const theme = createMuiTheme({
   typography: {

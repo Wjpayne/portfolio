@@ -1,6 +1,8 @@
 import { Button, Paper, Typography } from "@material-ui/core";
 import React from "react"
 
+//email form for my contact
+
 export default class MyForm extends React.Component {
     constructor(props) {
       super(props);
