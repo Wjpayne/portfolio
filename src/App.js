@@ -8,6 +8,7 @@ import ScrollTop from "./Components/Navigation/ScrollTop";
 import { ThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/styles";
 import Contact from "./Components/Contact/Contact";
 import Particles from "./Components/Particles/Particles";
+import "./index.css"
 
 const theme = createMuiTheme({
   typography: {
@@ -18,6 +19,8 @@ const theme = createMuiTheme({
 const appStyles = makeStyles((theme) =>({
 
   root: {
+    width: "100%",
+    margin: "auto",
     height: "4400px",
     [theme.breakpoints.down('lg')]: {
       height: "3700px",

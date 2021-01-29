@@ -11,13 +11,16 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
-import { Visibility } from '@material-ui/icons';
+
 
 const drawerWidth = 240;
 
 const navStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    margin: "0",
+    overflow: "hidden",
+ 
   },
 
   title: {
@@ -57,16 +60,25 @@ const navStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "white",
     transition: ".5s",
+    margin: "0",
+    overflow: "hidden"
+    
+    
   },
 
   appBarBlack: {
     backgroundColor: "transparent",
     transition: ".5s",
+    margin: "0",
+    overflow: "hidden"
+
   },
 
   navButton: {
     color: "white",
     visibility: "hidden",
+    width: "100%",
+    margin: "auto",
   },
 
   navButtonAppear: {
@@ -75,6 +87,8 @@ const navStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat Subrayada",
     fontSize: "20px",
     transition: ".7s",
+    width: "100%",
+    margin: "auto",
   },
 }));
 
@@ -146,11 +160,11 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <Paper>
+      <Paper className = {classes.root}>
         <AppBar
           elevation={0}
           className={classes[navRef.current]}
-          position="fixed"
+         
         >
           <Toolbar>
             <Button

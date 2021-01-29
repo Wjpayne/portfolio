@@ -9,18 +9,21 @@ const scrollTopStyles = makeStyles((theme) => ({
     top: "200px",
     color: "#3fd2c7",
     fontSize: "20px",
+    margin: "auto"
   },
 
   buttonShow: {
-    float: "right",
+    
     bottom: "30px",
-    right: "30px",
+    right: "60px",
     position: "fixed",
     visibility: "show",
+    margin: "auto"
   },
 
   buttonHidden: {
     visibility: "hidden",
+    margin: "auto"
   },
 }));
 
