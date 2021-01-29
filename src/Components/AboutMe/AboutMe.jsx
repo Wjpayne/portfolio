@@ -2,17 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
-
 const aboutMeStyles = makeStyles((theme) => ({
-
-
   name: {
     opacity: "0",
     position: "relative",
     transition: "1s",
     textAlign: "center",
-    top: "40%"
-  
+    top: "40%",
   },
 
   nameAppear: {
@@ -21,7 +17,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     textAlign: "center",
     transition: "1s",
     top: "40%",
-    fontSize: "50px"
+    fontSize: "50px",
   },
 
   text: {
@@ -30,7 +26,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     textAlign: "center",
     top: "40%",
     opacity: "0",
-    transition: "3s"
+    transition: "3s",
   },
 
   textAppear: {
@@ -39,26 +35,16 @@ const aboutMeStyles = makeStyles((theme) => ({
     textAlign: "center",
     top: "40%",
     opacity: "1",
-    transition: "3s"
+    transition: "3s",
   },
 
   div: {
-
-
     height: "1300px",
     top: "80%",
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down("lg")]: {
       height: "1000px",
-      
     },
   },
-
-
-
-
-
-
-
 }));
 
 export default function AboutMe() {
@@ -67,17 +53,16 @@ export default function AboutMe() {
   //set state for fade in and out
 
   const [name, setName] = useState("name");
-  const [text, setText] = useState("text")
+  const [text, setText] = useState("text");
 
   const nameRef = useRef();
-  const textRef = useRef()
+  const textRef = useRef();
 
-  nameRef.current = name
-  textRef.current = text
+  nameRef.current = name;
+  textRef.current = text;
 
   useEffect(() => {
     const handleScroll = () => {
-   
       const show = window.scrollY > 1200;
 
       if (show) {
@@ -94,37 +79,40 @@ export default function AboutMe() {
   }, []);
 
   useEffect(() => {
-
-      const handleScroll = () => {
-        const show = window.scrollY > 1100;
-        if (show) {
-          setText("textAppear")
-        } else {
-          setText("text")
-        }
-      };
-      document.addEventListener("scroll", handleScroll);
-      return () => {
-        document.removeEventListener("scroll", handleScroll);
-      };
-
-
-  }, [])
+    const handleScroll = () => {
+      const show = window.scrollY > 1100;
+      if (show) {
+        setText("textAppear");
+      } else {
+        setText("text");
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-     <div id = "AboutMe" className = {classes.div}>
-      <Typography className={classes[nameRef.current]}>HI I'M WILLIAM</Typography>
-      <br></br>
-      <Typography className={classes[textRef.current]}>A full stack engineer with a focus</Typography>
-      <Typography className={classes[textRef.current]}>on front end development</Typography>
-      <br></br>
-      <Typography className={classes[textRef.current]}>Proficient in React.JS, Redux, MERN stack,</Typography>
-      <Typography className={classes[textRef.current]}>Node.JS, Javascript, HTML, and CSS.</Typography>
-      
-    </div>
+      <div id="AboutMe" className={classes.div}>
+        <Typography className={classes[nameRef.current]}>
+          HI I'M WILLIAM
+        </Typography>
+        <br></br>
+        <Typography className={classes[textRef.current]}>
+          A full stack engineer with a focus
+        </Typography>
+        <Typography className={classes[textRef.current]}>
+          on front end development
+        </Typography>
+        <br></br>
+        <Typography className={classes[textRef.current]}>
+          Proficient in React.JS, Redux, MERN stack,
+        </Typography>
+        <Typography className={classes[textRef.current]}>
+          Node.JS, Javascript, HTML, and CSS.
+        </Typography>
+      </div>
     </>
   );
-};
-
-
-
+}
