@@ -63,7 +63,7 @@ export default function AboutMe() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 900;
+      const show = window.scrollY > window.innerHeight * 0.5;
 
       if (show) {
         setName("nameAppear");
@@ -80,7 +80,7 @@ export default function AboutMe() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 900;
+      const show = window.scrollY > window.innerHeight * 0.5;
       if (show) {
         setText("textAppear");
       } else {

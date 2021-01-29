@@ -11,10 +11,12 @@ const menuStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%)",
     top: "400px",
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down("lg")]: {
       top: "200px",
-  }
-},
+      width: "900px",
+      height: "500px",
+    },
+  },
 
   game: {
     fontFamily: "Orbitron",
@@ -22,6 +24,10 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "153px",
+      top: "320px",
+    },
   },
 
   secondGame: {
@@ -30,12 +36,20 @@ const menuStyles = makeStyles((theme) => ({
     top: "445px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "170px",
+      top: "345px",
+    },
   },
   about: {
     left: "447px",
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "340px",
+      top: "320px",
+    },
   },
 
   project: {
@@ -43,6 +57,11 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "625px",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "465px",
+      top: "320px",
+    },
+    
   },
 
   resume: {
@@ -50,6 +69,10 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "828px",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "623px",
+      top: "320px",
+    },
   },
 
   contact: {
@@ -57,6 +80,10 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "1025px",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "768px",
+      top: "320px",
+    },
   },
 
   aboutRotate: {
@@ -67,6 +94,10 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "340px",
+      top: "320px",
+    },
   },
 
   aboutRotateTwo: {
@@ -77,6 +108,10 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "340px",
+      top: "320px",
+    },
   },
 
   aboutRotateThree: {
@@ -87,6 +122,10 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    [theme.breakpoints.down("lg")]: {
+      left: "340px",
+      top: "320px",
+    },
   },
 
   projectRotate: {
@@ -97,6 +136,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "465px",
+      top: "320px",
+    },
   },
 
   projectRotateTwo: {
@@ -107,6 +150,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "465px",
+      top: "320px",
+    },
   },
 
   projectRotateThree: {
@@ -117,6 +164,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "465px",
+      top: "320px",
+    },
   },
 
   resumeRotate: {
@@ -127,6 +178,10 @@ const menuStyles = makeStyles((theme) => ({
     transform: "rotate(90deg)",
     transformOrigin: "0 50%",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "623px",
+      top: "320px",
+    },
   },
 
   resumeRotateTwo: {
@@ -137,6 +192,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "828px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "623px",
+      top: "320px",
+    },
   },
 
   resumeRotateThree: {
@@ -147,6 +206,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "828px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "623px",
+      top: "320px",
+    },
   },
 
   contactRotate: {
@@ -157,6 +220,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "768px",
+      top: "320px",
+    },
   },
 
   contactRotateTwo: {
@@ -167,6 +234,10 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "768px",
+      top: "320px",
+    },
   },
 
   contactRotateThree: {
@@ -177,16 +248,29 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    [theme.breakpoints.down("lg")]: {
+      left: "768px",
+      top: "320px",
+    },
   },
 
   text: {
     fontSize: "30px",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "25px",
+    },
   },
   gameText: {
     fontSize: "17px",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "14px",
+    },
   },
   secondGameText: {
     fontSize: "17px",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "14px",
+    },
   },
 }));
 
@@ -325,7 +409,7 @@ export default function Menu() {
       <Paper className={classes.paper} elevation={3}>
         <SVG />
 
-        <div  className={classes.game}>
+        <div className={classes.game}>
           <Fade in={game} timeout={1000}>
             <h1 className={classes.gameText}>Wanna play</h1>
           </Fade>
