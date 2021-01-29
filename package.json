@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "clsx": "^1.1.1",
+    "emailjs-com": "^2.6.4",
     "gsap": "^3.6.0",
     "particles-bg": "^2.5.0",
     "prop-types": "^15.7.2",

@@ -162,7 +162,7 @@ export default function NavBar() {
               Projects
             </Button>
             <Button className={classes[navButtonRef.current]}>Resume</Button>
-            <Button className={classes[navButtonRef.current]}>Contact</Button>
+            <Button component = {Link} to = {"/#Contact"} className={classes[navButtonRef.current]}>Contact</Button>
 
             <div
               style={{
