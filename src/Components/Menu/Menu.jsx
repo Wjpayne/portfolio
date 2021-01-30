@@ -140,7 +140,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "194px",
+      left: "51.5%",
       top: "140px",
     },
   },
@@ -211,7 +211,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "249px",
+      left: "66.5%",
       top: "140px",
     },
   },
@@ -282,7 +282,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "302px",
+      left: "81%",
       top: "140px",
     },
   },
