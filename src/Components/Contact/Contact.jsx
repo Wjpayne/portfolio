@@ -12,7 +12,7 @@ const styles = (theme) => ({
     bottom: "-350px",
     [theme.breakpoints.down("xs")]: {
       width: "300px",
-      bottom: "-400px"
+      bottom: "-550px"
     },
   },
 

@@ -11,9 +11,11 @@ const projectStyles = makeStyles((theme) => ({
     position: "relative",
     top: "200px",
     width: "100%",
+    padding: "20",
     [theme.breakpoints.down("lg")]: {
       position: "relative",
       top: "200px",
+      padding: "20",
     },
 
     [theme.breakpoints.down("md")]: {
@@ -33,9 +35,9 @@ const projectStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = projectStyles();
   return (
-    <div id = "Projects" >
+    <div id = "Projects" style = {{padding: 20}}  >
     <div className={classes.div}>
-      <Grid  container justify="center" direction="row">
+      <Grid  container justify="center" direction="row" spacing = {5}>
         <Grid item>
           <ProjectOne />
         </Grid>
