@@ -37,8 +37,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "73px",
-      top: "140px",
+      left: "20%",
+      top: "62%",
     },
   },
 
@@ -53,8 +53,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "345px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "80px",
-      top: "155px",
+      left: "22%",
+      top: "66%",
     },
   },
 
@@ -69,8 +69,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "147px",
-      top: "140px",
+      left: "39%",
+      top: "60%",
     },
   },
 
@@ -87,8 +87,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "147px",
-      top: "140px",
+      left: "39%",
+      top: "60%",
     },
   },
 
@@ -105,8 +105,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "147px",
-      top: "140px",
+      left: "39%",
+      top: "60%",
     },
   },
 
@@ -123,8 +123,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "147px",
-      top: "140px",
+      left: "39%",
+      top: "60%",
     },
   },
 
@@ -158,8 +158,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "195px",
-      top: "140px",
+      left: "51.5%",
+      top: "60%",
     },
   },
 
@@ -176,8 +176,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "195px",
-      top: "140px",
+      left: "51.5%",
+      top: "60%",
     },
   },
 
@@ -194,8 +194,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "195px",
-      top: "140px",
+      left: "51.5%",
+      top: "60%",
     },
   },
 
@@ -229,8 +229,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "251px",
-      top: "140px",
+      left: "66.5%",
+      top: "60%",
     },
   },
 
@@ -247,8 +247,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "251px",
-      top: "140px",
+      left: "66.5%",
+      top: "60%",
     },
   },
 
@@ -265,12 +265,10 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "251px",
-      top: "140px",
+      left: "66.5%",
+      top: "60%",
     },
   },
-
-
 
   //contact text and responsive attributes
 
@@ -301,10 +299,9 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "305px",
-      top: "140px",
+      left: "81%",
+      top: "60%",
     },
-    
   },
 
   contactRotateTwo: {
@@ -320,8 +317,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "305px",
-      top: "140px",
+      left: "81%",
+      top: "60%",
     },
   },
 
@@ -338,8 +335,8 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "305px",
-      top: "140px",
+      left: "81%",
+      top: "60%",
     },
   },
 
