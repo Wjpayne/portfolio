@@ -158,7 +158,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "194px",
+      left: "195px",
       top: "140px",
     },
   },
@@ -176,7 +176,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "194px",
+      left: "195px",
       top: "140px",
     },
   },
@@ -194,7 +194,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "194px",
+      left: "195px",
       top: "140px",
     },
   },
@@ -229,7 +229,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "249px",
+      left: "251px",
       top: "140px",
     },
   },
@@ -247,7 +247,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "249px",
+      left: "251px",
       top: "140px",
     },
   },
@@ -265,7 +265,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "249px",
+      left: "251px",
       top: "140px",
     },
   },
@@ -301,7 +301,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "302px",
+      left: "305px",
       top: "140px",
     },
     
@@ -320,7 +320,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "302px",
+      left: "305px",
       top: "140px",
     },
   },
@@ -338,7 +338,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "302px",
+      left: "305px",
       top: "140px",
     },
   },
