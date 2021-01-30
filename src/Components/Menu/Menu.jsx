@@ -37,7 +37,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "320px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "20%",
+      left: "19%",
       top: "62%",
     },
   },
@@ -53,7 +53,7 @@ const menuStyles = makeStyles((theme) => ({
       top: "345px",
     },
     [theme.breakpoints.down("xs")]: {
-      left: "22%",
+      left: "21%",
       top: "66%",
     },
   },
