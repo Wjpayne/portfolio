@@ -62,9 +62,10 @@ const navStyles = makeStyles((theme) => ({
     transition: ".5s",
     margin: "auto",
     padding: "0",
+    position: "fixed",
     [theme.breakpoints.down("sm")]: {
-      visibility: "hidden",
       backgroundColor: "transparent"
+
       
     },
   },
@@ -74,7 +75,9 @@ const navStyles = makeStyles((theme) => ({
     transition: ".5s",
     margin: "0",
     overflow: "hidden",
+    position: "fixed",
     [theme.breakpoints.down("sm")]: {
+
     },
   },
 
