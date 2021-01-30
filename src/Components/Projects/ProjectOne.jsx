@@ -29,6 +29,8 @@ const expandStyles = makeStyles((theme) => ({
 
   card: {
     width: "400px",
+    minHeight: "552px"
+    
   },
 
   text: {
@@ -46,6 +48,10 @@ const expandStyles = makeStyles((theme) => ({
   title: {
     color: "#2565ae",
   },
+  cardIMG: {
+    width: "225px",
+    height: "400px"
+  }
 }));
 
 export default function Projects() {

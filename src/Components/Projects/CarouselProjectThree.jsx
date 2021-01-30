@@ -33,5 +33,5 @@ export default function ProjectThreeCarousel() {
 }
 
 function Item(props) {
-  return <img alt = "screen show of project" src={props.item.image} />;
+  return <img style = {{height: "225px", width: "225"}} alt = "screen show of project" src={props.item.image} />;
 }
