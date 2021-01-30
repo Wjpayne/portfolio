@@ -13,6 +13,7 @@ import {
 import Contact from "./Components/Contact/Contact";
 import Particles from "./Components/Particles/Particles";
 import "./index.css";
+import { useEffect, useState } from "react";
 
 const theme = createMuiTheme({
   typography: {
@@ -39,7 +40,11 @@ const appStyles = makeStyles((theme) => ({
 }));
 
 const App = () => {
+
+  //set a spinner until the reactDOM renders
   const styles = appStyles();
+
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
