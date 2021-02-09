@@ -5,14 +5,23 @@ import React from "react";
 
 const styles = (theme) => ({
   div: {
+    height: "600px",
     width: "460px",
     position: "relative",
     left: "50%",
     transform: "translate(-50%)",
-    bottom: "-350px",
+    bottom: "-500px",
     [theme.breakpoints.down("xs")]: {
-      width: "300px",
-      bottom: "-550px"
+      width: "390px",
+      bottom: "-680px"
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "390px",
+      bottom: "-900px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "390px",
+      bottom: "-650px"
     },
   },
 
@@ -26,7 +35,7 @@ const styles = (theme) => ({
     borderStyle: "inset",
     borderWidth: "2px",
     [theme.breakpoints.down("xs")]: {
-      width: "300px",
+      width: "390px",
     },
   },
 });

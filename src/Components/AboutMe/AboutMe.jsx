@@ -58,7 +58,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     height: "1300px",
     top: "80%",
     [theme.breakpoints.down("lg")]: {
-      height: "800px",
+      height: "1200px",
       top: "20%"
     },
     [theme.breakpoints.down("xs")]: {

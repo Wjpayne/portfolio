@@ -13,7 +13,9 @@ import {
 import Contact from "./Components/Contact/Contact";
 import Particles from "./Components/Particles/Particles";
 import "./index.css";
-import { useEffect, useState } from "react";
+// import { Resume } from "./Components/Resume/Resume"
+
+
 
 const theme = createMuiTheme({
   typography: {
@@ -23,9 +25,10 @@ const theme = createMuiTheme({
 
 const appStyles = makeStyles((theme) => ({
   root: {
+    height: "4000px",
     width: "100%",
     margin: "auto",
-    height: "4400px",
+    
     [theme.breakpoints.down("lg")]: {
       height: "3700px",
     },
@@ -48,6 +51,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+    
         <div className={styles.root}>
           <Particles />
           <ScrollHandler />
@@ -57,7 +61,12 @@ const App = () => {
           <Projects />
           <Contact />
           <ScrollTop />
+          
+       
         </div>
+        
+
+          
       </BrowserRouter>
     </ThemeProvider>
   );

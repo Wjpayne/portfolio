@@ -11,6 +11,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
+import ResumeLink from '@material-ui/core/Link';
 
 const drawerWidth = 240;
 
@@ -187,7 +188,9 @@ export default function NavBar() {
             >
               Projects
             </Button>
+            <ResumeLink target = "blank" href = "https://william-payne-resume.herokuapp.com/">
             <Button className={classes[navButtonRef.current]}>Resume</Button>
+            </ResumeLink >
             <Button
               component={Link}
               to={"/#Contact"}
@@ -233,7 +236,9 @@ export default function NavBar() {
             </ListItem>
             <Divider />
             <ListItem button>
+            <ResumeLink target = "blank" href = "https://william-payne-resume.herokuapp.com/">
               <ListItemText className={classes.title}>Resume</ListItemText>
+              </ResumeLink>
             </ListItem>
             <Divider />
             <ListItem component={Link} to={"/#Contact"} button>
