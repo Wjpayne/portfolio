@@ -9,7 +9,7 @@ import {
   makeStyles,
   Typography,
   Divider,
-  Link
+  Link,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
@@ -66,7 +66,7 @@ export default function ProjectThree() {
     <div>
       <Card className={classes.card}>
         <CardHeader
-        className={classes.title}
+          className={classes.title}
           title="Relish"
           subheader="A CRM ticket system designed to organize, access, and respond to customer requests"
         />
@@ -84,8 +84,13 @@ export default function ProjectThree() {
           >
             here
           </a>
-          <IconButton aria-label = "Link to github for ricket-system-project">
-            <Link className = {classes.link}target target = "blank" href = "https://github.com/Wjpayne/ticket-management-system">
+          <IconButton aria-label="Link to github for ricket-system-project">
+            <Link
+              className={classes.link}
+              target
+              target="blank"
+              href="https://github.com/Wjpayne/ticket-management-system"
+            >
               <GitHubIcon />
             </Link>
           </IconButton>
@@ -106,7 +111,11 @@ export default function ProjectThree() {
         </CardActions>
         <Collapse in={expanded}>
           <Typography className={classes.text}>
-            A Complete Full Stack Application using the MERN stack. Client and server side user authentification. This app is a simple CRM application that implements a ticketing system to handle client request. An Admin panel is currently being created for this application.   
+            A Complete Full Stack Application using the MERN stack. Client and
+            server side user authentification. This app is a simple CRM
+            application that implements a ticketing system to handle client
+            request. An Admin panel is currently being created for this
+            application.
           </Typography>
           <Divider />
           <Typography className={classes.text}>MongoDB</Typography>
