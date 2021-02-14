@@ -9,11 +9,14 @@ import {
   IconButton,
   makeStyles,
   Typography,
+  Link
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
 import ProjectOneCarousel from "./CarouselProjectOne";
+import GitHubIcon from "@material-ui/icons/GitHub";
+
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -87,6 +90,11 @@ export default function Projects() {
           >
             here
           </a>
+          <IconButton aria-label = "Link to github for ricket-system-project">
+            <Link  className = {classes.link}target = "blank" href = "https://github.com/Wjpayne/vinylCollector">
+              <GitHubIcon />
+            </Link>
+          </IconButton>
         </CardContent>
         <CardActions>
           <IconButton

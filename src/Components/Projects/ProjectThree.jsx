@@ -9,11 +9,13 @@ import {
   makeStyles,
   Typography,
   Divider,
+  Link
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
 import CarouselProjectThree from "./CarouselProjectThree";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -66,7 +68,7 @@ export default function ProjectThree() {
         <CardHeader
         className={classes.title}
           title="Relish"
-          subheader="An App to search, find, and save recipes bases on user preference"
+          subheader="A CRM ticket system designed to organize, access, and respond to customer requests"
         />
 
         <CardMedia
@@ -78,10 +80,15 @@ export default function ProjectThree() {
           <a
             className={classes.link}
             target="blank"
-            href="https://theblastbeat.herokuapp.com/"
+            href="https://ticket-system-crm.herokuapp.com/"
           >
             here
           </a>
+          <IconButton aria-label = "Link to github for ricket-system-project">
+            <Link className = {classes.link}target target = "blank" href = "https://github.com/Wjpayne/ticket-management-system">
+              <GitHubIcon />
+            </Link>
+          </IconButton>
         </CardContent>
         <CardActions>
           <IconButton
@@ -99,15 +106,16 @@ export default function ProjectThree() {
         </CardActions>
         <Collapse in={expanded}>
           <Typography className={classes.text}>
-            A Complete Full Stack Application using the MERN stack. Includes
-            complete user authentification, an API to keep track of user data,
-            full CRUD capabilities, and completely responsive for mobile
+            A Complete Full Stack Application using the MERN stack. Client and server side user authentification. This app is a simple CRM application that implements a ticketing system to handle client request. An Admin panel is currently being created for this application.   
           </Typography>
           <Divider />
           <Typography className={classes.text}>MongoDB</Typography>
           <Typography className={classes.text}>Express</Typography>
           <Typography className={classes.text}>React</Typography>
           <Typography className={classes.text}>Node.js</Typography>
+          <Typography className={classes.text}>Redux</Typography>
+          <Typography className={classes.text}>Redis</Typography>
+          <Typography className={classes.text}>Joi</Typography>
         </Collapse>
       </Card>
     </div>

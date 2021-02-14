@@ -9,11 +9,13 @@ import {
   makeStyles,
   Typography,
   Divider,
+  Link
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
 import CarouselProjectTwo from "./CarouselProjectTwo";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const expandStyles = makeStyles((theme) => ({
   expand: {
@@ -80,6 +82,11 @@ export default function ProjectTwo() {
           >
             here
           </a>
+          <IconButton aria-label = "Link to github for ricket-system-project">
+            <Link className = {classes.link}target target = "blank" href = "https://github.com/Wjpayne/Path-algo">
+              <GitHubIcon />
+            </Link>
+          </IconButton>
         </CardContent>
         <CardActions>
           <IconButton

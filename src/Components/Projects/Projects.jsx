@@ -39,13 +39,13 @@ export default function Projects() {
     <div className={classes.div}>
       <Grid  container justify="center" direction="row" spacing = {5}>
         <Grid item>
+          <ProjectThree />
+        </Grid>
+        <Grid item>
           <ProjectOne />
         </Grid>
         <Grid item>
-          <ProjectTwo />
-        </Grid>
-        <Grid item>
-          <ProjectThree />
+          <ProjectTwo/>
         </Grid>
       </Grid>
     </div>
