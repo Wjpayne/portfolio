@@ -21,7 +21,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "390px",
-      bottom: "-650px"
+      bottom: "-1450px"
     },
   },
 

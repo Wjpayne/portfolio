@@ -33,7 +33,7 @@ const appStyles = makeStyles((theme) => ({
       height: "3700px",
     },
     [theme.breakpoints.down("sm")]: {
-      height: "4500px",
+      height: "4000px",
     },
 
     [theme.breakpoints.down("xs")]: {

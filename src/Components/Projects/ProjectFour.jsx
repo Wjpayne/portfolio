@@ -5,16 +5,16 @@ import {
   CardHeader,
   CardMedia,
   Collapse,
+  Divider,
   IconButton,
   makeStyles,
   Typography,
-  Divider,
   Link,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import React, { useState } from "react";
 import clsx from "clsx";
-import CarouselProjectThree from "./CarouselProjectThree";
+import CarouselProjectFour from "./CarouselProjectFour"
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const expandStyles = makeStyles((theme) => ({
@@ -31,12 +31,11 @@ const expandStyles = makeStyles((theme) => ({
 
   card: {
     width: "400px",
+    minHeight: "552px",
   },
+
   text: {
     margin: "5px",
-  },
-  cardIMG: {
-    height: "225px",
   },
 
   content: {
@@ -49,9 +48,13 @@ const expandStyles = makeStyles((theme) => ({
   title: {
     color: "#2565ae",
   },
+  cardIMG: {
+    width: "225px",
+    height: "400px",
+  },
 }));
 
-export default function ProjectThree() {
+export default function ProjectFour() {
   const classes = expandStyles();
 
   //set State for expand
@@ -61,34 +64,33 @@ export default function ProjectThree() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
   return (
     <div>
       <Card className={classes.card}>
         <CardHeader
           className={classes.title}
-          title="Relish"
-          subheader="A CRM ticket system designed to organize, access, and respond to customer requests"
+          title="Trello Board"
+          subheader="An App based on the popular Trello board app. "
         />
-
         <CardMedia
           className={classes.cardIMG}
-          component={CarouselProjectThree}
-        />
+          component={CarouselProjectFour}
+        ></CardMedia>
+
         <CardContent className={classes.content}>
           Check out the live project{" "}
           <a
             className={classes.link}
             target="blank"
-            href="https://ticket-system-crm.herokuapp.com/"
+            href="https://william-trello-board.herokuapp.com/"
           >
             here
           </a>
-          <IconButton aria-label="Link to github for ricket-system-project">
+          <IconButton aria-label="Link to github for trello-clone project">
             <Link
               className={classes.link}
               target="blank"
-              href="https://github.com/Wjpayne/ticket-management-system"
+              href="https://github.com/Wjpayne/trello-clone"
             >
               <GitHubIcon />
             </Link>
@@ -110,11 +112,10 @@ export default function ProjectThree() {
         </CardActions>
         <Collapse in={expanded}>
           <Typography className={classes.text}>
-            A Complete Full Stack Application using the MERN stack. Client and
-            server side user authentification. This app is a simple CRM
-            application that implements a ticketing system to handle client
-            request. An Admin panel is currently being created for this
-            application.
+            A Complete Full Stack Application using the MERN stack based on the
+            popular Trello application. This App has full user authentification,
+            complete CRUD capabilities, and keeps track of every board, list,
+            and card made by the user.
           </Typography>
           <Divider />
           <Typography className={classes.text}>MongoDB</Typography>
@@ -122,8 +123,6 @@ export default function ProjectThree() {
           <Typography className={classes.text}>React</Typography>
           <Typography className={classes.text}>Node.js</Typography>
           <Typography className={classes.text}>Redux</Typography>
-          <Typography className={classes.text}>Redis</Typography>
-          <Typography className={classes.text}>Joi</Typography>
         </Collapse>
       </Card>
     </div>
