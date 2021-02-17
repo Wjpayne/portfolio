@@ -17,11 +17,11 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "390px",
-      bottom: "-900px"
+      bottom: "-1200px"
     },
     [theme.breakpoints.down("sm")]: {
       width: "390px",
-      bottom: "-1450px"
+      bottom: "-2500px"
     },
   },
 
@@ -36,6 +36,7 @@ const styles = (theme) => ({
     borderWidth: "2px",
     [theme.breakpoints.down("xs")]: {
       width: "390px",
+      
     },
   },
 });

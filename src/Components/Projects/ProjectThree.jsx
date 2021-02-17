@@ -67,7 +67,7 @@ export default function ProjectThree() {
       <Card className={classes.card}>
         <CardHeader
           className={classes.title}
-          title="Relish"
+          title="Ticket Management System"
           subheader="A CRM ticket system designed to organize, access, and respond to customer requests"
         />
 
