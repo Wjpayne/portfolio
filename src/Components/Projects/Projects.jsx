@@ -4,7 +4,7 @@ import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
 import ProjectThree from "./ProjectThree";
 import ProjectFour from "./ProjectFour";
-import Contact from "../Contact/Contact";
+
 
 const projectStyles = makeStyles((theme) => ({
   div: {
@@ -35,7 +35,7 @@ const projectStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = projectStyles();
   return (
-    <div id="Projects" style={{ padding: 20 }}>
+    <div id="Projects" style={{ padding: 40 }}>
       <div className={classes.div}>
         <Grid container justify="center" direction="row" spacing={5}>
           <Grid item>

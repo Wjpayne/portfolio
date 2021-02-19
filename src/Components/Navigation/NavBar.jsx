@@ -11,17 +11,17 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
-import ResumeLink from '@material-ui/core/Link';
+import ResumeLink from "@material-ui/core/Link";
 
 const drawerWidth = 240;
 
 const navStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: "auto",
+    margin: "0",
     padding: "0",
     [theme.breakpoints.down("xs")]: {
-      width: "200%",
+      
     },
   },
 
@@ -34,8 +34,9 @@ const navStyles = makeStyles((theme) => ({
   menuButton: {
     color: "#2565ae",
     fontSize: "40px",
-    position: "relative",
     float: "right"
+   
+    
   },
 
   drawer: {
@@ -65,21 +66,18 @@ const navStyles = makeStyles((theme) => ({
     padding: "0",
     position: "fixed",
     [theme.breakpoints.down("sm")]: {
-      backgroundColor: "transparent"
-
-      
+      backgroundColor: "transparent",
     },
   },
 
   appBarBlack: {
     backgroundColor: "transparent",
     transition: ".5s",
-    margin: "0",
+    margin: "auto",
+    padding: "0",
     overflow: "hidden",
     position: "fixed",
-    [theme.breakpoints.down("sm")]: {
-
-    },
+    [theme.breakpoints.down("sm")]: {},
   },
 
   navButton: {
@@ -99,6 +97,7 @@ const navStyles = makeStyles((theme) => ({
     margin: "auto",
     [theme.breakpoints.down("xs")]: {
       visibility: "hidden",
+      
     },
   },
 }));
@@ -188,9 +187,12 @@ export default function NavBar() {
             >
               Projects
             </Button>
-            <ResumeLink target = "blank" href = "https://william-payne-resume.herokuapp.com/">
-            <Button className={classes[navButtonRef.current]}>Resume</Button>
-            </ResumeLink >
+            <ResumeLink
+              target="blank"
+              href="https://william-payne-resume.herokuapp.com/"
+            >
+              <Button className={classes[navButtonRef.current]}>Resume</Button>
+            </ResumeLink>
             <Button
               component={Link}
               to={"/#Contact"}
@@ -236,8 +238,11 @@ export default function NavBar() {
             </ListItem>
             <Divider />
             <ListItem button>
-            <ResumeLink target = "blank" href = "https://william-payne-resume.herokuapp.com/">
-              <ListItemText className={classes.title}>Resume</ListItemText>
+              <ResumeLink
+                target="blank"
+                href="https://william-payne-resume.herokuapp.com/"
+              >
+                <ListItemText className={classes.title}>Resume</ListItemText>
               </ResumeLink>
             </ListItem>
             <Divider />

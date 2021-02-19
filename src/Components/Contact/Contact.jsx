@@ -23,6 +23,10 @@ const styles = (theme) => ({
       width: "390px",
       bottom: "-2500px"
     },
+    [theme.breakpoints.down("lg")]: {
+      width: "390px",
+      bottom: "-1200px"
+    },
   },
 
   text: {
@@ -35,7 +39,7 @@ const styles = (theme) => ({
     borderStyle: "inset",
     borderWidth: "2px",
     [theme.breakpoints.down("xs")]: {
-      width: "390px",
+      width: "360px",
       
     },
   },

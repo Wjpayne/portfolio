@@ -84,7 +84,7 @@ export default function ProjectThree() {
           >
             here
           </a>
-          <IconButton aria-label="Link to github for ricket-system-project">
+          <IconButton aria-label="Link to github for ticket-system-project">
             <Link
               className={classes.link}
               target="blank"
