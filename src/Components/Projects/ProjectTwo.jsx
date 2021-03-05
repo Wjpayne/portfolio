@@ -83,7 +83,7 @@ export default function ProjectTwo() {
             here
           </a>
           <IconButton aria-label = "Link to github for ricket-system-project">
-            <Link className = {classes.link}target target = "blank" href = "https://github.com/Wjpayne/Path-algo">
+            <Link className = {classes.link} target = "blank" href = "https://github.com/Wjpayne/Path-algo">
               <GitHubIcon />
             </Link>
           </IconButton>

@@ -1,5 +1,8 @@
-import { Button, Typography, withStyles } from "@material-ui/core";
+
+import { Button, Typography, withStyles, TextField } from "@material-ui/core";
 import React from "react";
+import { OutlinedInput } from '@material-ui/core';
+
 
 //styles for form
 
@@ -17,32 +20,24 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "390px",
-      bottom: "-1200px"
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "390px",
-      bottom: "-2500px"
+      bottom: "-900px"
     },
     [theme.breakpoints.down("lg")]: {
       width: "390px",
-      bottom: "-1200px"
+      bottom: "-1300px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "390px",
+      bottom: "-1450px"
     },
   },
 
-  text: {
-    margin: "10px",
-    height: "200px",
-    width: "430px",
-    borderRadius: "5px",
-    outline: "none",
-    resize: "none",
-    borderStyle: "inset",
-    borderWidth: "2px",
-    [theme.breakpoints.down("xs")]: {
-      width: "360px",
-      
-    },
-  },
+
+  input: {
+    backgroundColor: "white",
+    margin: "5px"
+
+  }
 });
 
 //email form for my contact
@@ -78,38 +73,29 @@ class MyForm extends React.Component {
           action="https://formspree.io/f/xeqpnbyy"
           method="POST"
         >
-          <input
+          <OutlinedInput
             placeholder="Email"
-            style={{
-              margin: "10px",
-              height: "25px",
-              width: "200px",
-              borderRadius: "5px",
-              outline: "none",
-            }}
+            fullWidth
             type="Email"
             name="Email"
+            className = {classes.input}
           />
 
-          <input
+          <OutlinedInput
             type="text"
+            fullWidth
             placeholder="Name"
             name="Name"
-            style={{
-              margin: "10px",
-              height: "25px",
-              width: "200px",
-              borderRadius: "5px",
-              outline: "none",
-            }}
+            className = {classes.input}
+    
           />
 
-          <textarea className = {classes.text} type="text" name="Message" />
+          <TextField placeholder="Message..." className = {classes.input} multiline rows = {5} variant="outlined" fullWidth type="text" name="Message" />
           {status === "SUCCESS" ? (
             <Typography
               style={{
                 position: "absolute",
-                bottom: "20px",
+
                 left: "50%",
                 transform: "translate(-50%)",
               }}
@@ -123,6 +109,7 @@ class MyForm extends React.Component {
                 top: "20px",
                 left: "50%",
                 transform: "translate(-50%)",
+                
               }}
               type="submit"
             >
@@ -133,7 +120,6 @@ class MyForm extends React.Component {
             <p
               style={{
                 position: "absolute",
-                bottom: "-5px",
                 left: "50%",
                 transform: "translate(-50%)",
                 color: "red",

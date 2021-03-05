@@ -10,11 +10,9 @@ const aboutMeStyles = makeStyles((theme) => ({
     textAlign: "center",
     top: "30%",
     [theme.breakpoints.down("xs")]: {
-      top: "20%"
+      top: "20%",
     },
-    [theme.breakpoints.down("xs")]: {
-      
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
 
   nameAppear: {
@@ -24,9 +22,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     transition: "1s",
     top: "30%",
     fontSize: "50px",
-    [theme.breakpoints.down("xs")]: {
-      
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
 
   text: {
@@ -36,10 +32,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "30%",
     opacity: "0",
     transition: "3s",
-    [theme.breakpoints.down("xs")]: {
-      
-    },
-
+    [theme.breakpoints.down("xs")]: {},
   },
 
   textAppear: {
@@ -49,9 +42,7 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "30%",
     opacity: "1",
     transition: "3s",
-    [theme.breakpoints.down("xs")]: {
-      
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
 
   div: {
@@ -59,15 +50,12 @@ const aboutMeStyles = makeStyles((theme) => ({
     top: "80%",
     [theme.breakpoints.down("lg")]: {
       height: "1200px",
-      top: "20%"
+      top: "20%",
     },
     [theme.breakpoints.down("xs")]: {
       height: "800px",
-      top: "20%"
-    
-
+      top: "20%",
     },
-
   },
 }));
 
@@ -118,26 +106,26 @@ export default function AboutMe() {
   }, []);
   return (
     <>
-    <div >
-      <div  id = "AboutMe" className={classes.div}>
-        <Typography  className={classes[nameRef.current]}>
-          HI I'M WILLIAM
-        </Typography>
-        <br></br>
-        <Typography className={classes[textRef.current]}>
-          A full stack engineer with a focus
-        </Typography>
-        <Typography className={classes[textRef.current]}>
-          on front end development
-        </Typography>
-        <br></br>
-        <Typography className={classes[textRef.current]}>
-          Proficient in React.JS, Redux, MERN stack,
-        </Typography>
-        <Typography className={classes[textRef.current]}>
-          Node.JS, Javascript, HTML, and CSS.
-        </Typography>
-      </div>
+      <div>
+        <div id="AboutMe" className={classes.div}>
+          <Typography className={classes[nameRef.current]}>
+            HI I'M WILLIAM
+          </Typography>
+          <br></br>
+          <Typography className={classes[textRef.current]}>
+            A full stack engineer with a focus
+          </Typography>
+          <Typography className={classes[textRef.current]}>
+            on front end development
+          </Typography>
+          <br></br>
+          <Typography className={classes[textRef.current]}>
+            Proficient in React.JS, Redux, MERN stack, MongoDB
+          </Typography>
+          <Typography className={classes[textRef.current]}>
+            Express, Node.JS, Javascript, HTML, and CSS.
+          </Typography>
+        </div>
       </div>
     </>
   );

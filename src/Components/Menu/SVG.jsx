@@ -152,11 +152,11 @@ export default class SVG extends Component {
           </g>
           </Link>
 
-          <g className="house" transform="translate(93)">
-            <g id="bg-fill" className="bg-fill">
-              <path fill="#bd9ec9" d="M751.19 225.73h27.99v165.55h-27.99z" />
+          <g transform="translate(93)">
+            <g  >
+              <path fill="#fff" d="M751.19 225.73h27.99v165.55h-27.99z" />
               <path
-                fill="#906c99"
+                fill="#fff"
                 d="M751.16 264.15l-.21 11.61 28.28-27.75-.11-10.55-27.96 26.69zm.5 22.38l-.21 11.61 28.27-27.75-.1-10.55-27.96 26.69zm-.33 23.54l-.21 11.6 28.27-27.74-.1-10.55-27.96 26.69zm-.17 23.37l-.21 11.6 28.28-27.74-.11-10.56-27.96 26.7zm0 22.38l-.21 11.61 28.28-27.75-.11-10.55-27.96 26.69zm-.16 23.54l-.21 11.6 28.27-27.75-.1-10.55-27.96 26.7zm14.99 8.54l13.33-12.02-1.32 15.47-13.16-.66 1.15-2.79zm-15.31-145.49l.33 10.21 19.26-18.6-13.17.66-6.42 7.73z"
               />
             </g>
@@ -195,7 +195,7 @@ export default class SVG extends Component {
             strokeLinecap="round"
           />
 
-          <a href = "https://wjpayne.github.io/frogger/" >
+          <a target = "blank" href = "https://wjpayne.github.io/frogger/" >
             <g
               transform="translate(-813)"
               className="house"

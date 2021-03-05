@@ -17,16 +17,11 @@ const drawerWidth = 240;
 
 const navStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    margin: "0",
+    margin: "auto",
     padding: "0",
-    [theme.breakpoints.down("xs")]: {
-      
-    },
   },
 
   title: {
-    flexGrow: 1,
     fontSize: "50",
     color: "#2565ae",
   },
@@ -34,8 +29,6 @@ const navStyles = makeStyles((theme) => ({
   menuButton: {
     color: "#2565ae",
     fontSize: "40px",
-    float: "right"
-   
     
   },
 
@@ -47,11 +40,10 @@ const navStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerHeader: {
-    display: "flex",
     alignItems: "center",
-    padding: theme.spacing(0, 1),
+  
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+   
   },
 
   drawerTitle: {
@@ -97,7 +89,6 @@ const navStyles = makeStyles((theme) => ({
     margin: "auto",
     [theme.breakpoints.down("xs")]: {
       visibility: "hidden",
-      
     },
   },
 }));
@@ -136,7 +127,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 200;
+      const show = window.scrollY > 800;
       if (show) {
         setNavbackground("appBar");
       } else {
@@ -152,7 +143,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 200;
+      const show = window.scrollY > 800;
       if (show) {
         setNavButton("navButtonAppear");
       } else {

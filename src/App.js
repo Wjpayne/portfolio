@@ -15,8 +15,6 @@ import Particles from "./Components/Particles/Particles";
 import "./index.css";
 // import { Resume } from "./Components/Resume/Resume"
 
-
-
 const theme = createMuiTheme({
   typography: {
     fontFamily: ["Montserrat"],
@@ -25,33 +23,20 @@ const theme = createMuiTheme({
 
 const appStyles = makeStyles((theme) => ({
   root: {
-    height: "4000px",
-    width: "100%",
-    margin: "auto",
-    
-    [theme.breakpoints.down("lg")]: {
-      height: "3700px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "4000px",
-    },
-
-    [theme.breakpoints.down("xs")]: {
-      height: "4000px",
-    },
+    height: "100vh",
+    padding: "20px",
+    margin: "0",
+    scrollBehavior: "smooth",
   },
 }));
 
 const App = () => {
-
   //set a spinner until the reactDOM renders
   const styles = appStyles();
-
 
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-    
         <div className={styles.root}>
           <Particles />
           <ScrollHandler />
@@ -61,12 +46,7 @@ const App = () => {
           <Projects />
           <Contact />
           <ScrollTop />
-          
-       
         </div>
-        
-
-          
       </BrowserRouter>
     </ThemeProvider>
   );

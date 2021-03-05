@@ -1,7 +1,14 @@
-import { makeStyles, Paper, Slide, Typography, Fade } from "@material-ui/core";
+import {
+  makeStyles,
+  Paper,
+  Slide,
+  Typography,
+  Fade,
+} from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
 import SVG from "./SVG";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const menuStyles = makeStyles((theme) => ({
   paper: {
@@ -10,7 +17,7 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "50%",
     transform: "translate(-50%)",
-    top: "400px",
+    top: "100px",
     [theme.breakpoints.down("lg")]: {
       top: "100px",
       width: "900px",
@@ -64,6 +71,7 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "340px",
       top: "320px",
@@ -82,6 +90,7 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "340px",
       top: "320px",
@@ -100,6 +109,7 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "340px",
       top: "320px",
@@ -118,6 +128,7 @@ const menuStyles = makeStyles((theme) => ({
     top: "415px",
     position: "absolute",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "340px",
       top: "320px",
@@ -135,6 +146,7 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "625px",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
@@ -153,6 +165,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
@@ -171,6 +184,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
@@ -189,6 +203,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "625px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "465px",
       top: "320px",
@@ -206,6 +221,7 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "828px",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "623px",
       top: "320px",
@@ -224,6 +240,7 @@ const menuStyles = makeStyles((theme) => ({
     transform: "rotate(90deg)",
     transformOrigin: "0 50%",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "623px",
       top: "320px",
@@ -242,6 +259,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "828px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "623px",
       top: "320px",
@@ -260,6 +278,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "828px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "623px",
       top: "320px",
@@ -277,6 +296,7 @@ const menuStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "1025px",
     color: "#2565ae",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "768px",
       top: "320px",
@@ -294,6 +314,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "768px",
       top: "320px",
@@ -312,6 +333,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "768px",
       top: "320px",
@@ -330,6 +352,7 @@ const menuStyles = makeStyles((theme) => ({
     left: "1025px",
     color: "#2565ae",
     transition: "1s",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       left: "768px",
       top: "320px",
@@ -342,6 +365,7 @@ const menuStyles = makeStyles((theme) => ({
 
   text: {
     fontSize: "30px",
+    textDecoration: "none",
     [theme.breakpoints.down("lg")]: {
       fontSize: "25px",
     },
@@ -368,6 +392,10 @@ const menuStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: "7px",
     },
+  },
+
+  scroll: {
+    scrollBehavior: "smooth",
   },
 }));
 
@@ -505,42 +533,48 @@ export default function Menu() {
     <>
       <Paper className={classes.paper} elevation={3}>
         <SVG />
+        <a target="blank" href="https://wjpayne.github.io/frogger/">
+          <div className={classes.game}>
+            <Fade in={game} timeout={1000}>
+              <h1 className={classes.gameText}>Wanna play</h1>
+            </Fade>
+          </div>
 
-        <div className={classes.game}>
-          <Fade in={game} timeout={1000}>
-            <h1 className={classes.gameText}>Wanna play</h1>
-          </Fade>
-        </div>
-
-        <div className={classes.secondGame}>
-          <Fade in={game} timeout={500}>
-            <h1 className={classes.secondGameText}>a game?</h1>
-          </Fade>
-        </div>
-
-        <div className={classes[aboutRef.current]}>
-          <Slide direction="left" in={about} mountOnEnter unmountOnExit>
-            <Typography className={classes.text}>About me</Typography>
-          </Slide>
-        </div>
-
-        <div className={classes[projectRef.current]}>
-          <Slide direction="right" in={project} mountOnEnter unmountOnExit>
-            <Typography className={classes.text}>Projects</Typography>
-          </Slide>
-        </div>
-
+          <div className={classes.secondGame}>
+            <Fade in={game} timeout={500}>
+              <h1 className={classes.secondGameText}>a game?</h1>
+            </Fade>
+          </div>
+        </a>
+        <Link to="#AboutMe">
+          <div className={classes[aboutRef.current]}>
+            <Slide direction="left" in={about} mountOnEnter unmountOnExit>
+              <Typography className={classes.text}>About me</Typography>
+            </Slide>
+          </div>
+        </Link>
+        <Link to="#Projects">
+          <div className={classes[projectRef.current]}>
+            <Slide direction="right" in={project} mountOnEnter unmountOnExit>
+              <Typography className={classes.text}>Projects</Typography>
+            </Slide>
+          </div>
+        </Link>
+        <a target = "blank" href = "https://william-payne-resume.herokuapp.com/">
         <div className={classes[resumeRef.current]}>
           <Slide direction="left" in={resume} mountOnEnter unmountOnExit>
             <Typography className={classes.text}>Resume</Typography>
           </Slide>
         </div>
+        </a>
+        <Link to = "#Contact">
 
         <div className={classes[contactRef.current]}>
           <Slide direction="right" in={contact} mountOnEnter unmountOnExit>
             <Typography className={classes.text}>Contact</Typography>
           </Slide>
         </div>
+        </Link>
       </Paper>
     </>
   );
