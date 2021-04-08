@@ -59,8 +59,10 @@ const aboutMeStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AboutMe() {
+export default function AboutMe(props) {
   const classes = aboutMeStyles();
+
+  const { darkState } = props
 
   //set state for fade in and out
 
@@ -108,21 +110,21 @@ export default function AboutMe() {
     <>
       <div>
         <div id="AboutMe" className={classes.div}>
-          <Typography className={classes[nameRef.current]}>
+          <Typography className={classes[nameRef.current]} style = {darkState ? {color: "white" } : {color: "black"}}>
             HI I'M WILLIAM
           </Typography>
           <br></br>
-          <Typography className={classes[textRef.current]}>
+          <Typography className={classes[textRef.current]} style = {darkState ? {color: "white" } : {color: "black"}}>
             A full stack engineer with a focus
           </Typography>
-          <Typography className={classes[textRef.current]}>
+          <Typography className={classes[textRef.current]} style = {darkState ? {color: "white" } : {color: "black"}}>
             on front end development
           </Typography>
           <br></br>
-          <Typography className={classes[textRef.current]}>
+          <Typography className={classes[textRef.current]} style = {darkState ? {color: "white" } : {color: "black"}}>
             Proficient in React.JS, Redux, MERN stack, MongoDB
           </Typography>
-          <Typography className={classes[textRef.current]}>
+          <Typography className={classes[textRef.current]} style = {darkState ? {color: "white" } : {color: "black"}}>
             Express, Node.JS, Javascript, HTML, and CSS.
           </Typography>
         </div>

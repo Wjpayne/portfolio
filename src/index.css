@@ -7,10 +7,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient( #e1f2f7, transparent);
+
   height: "100%";
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
  
 
 }

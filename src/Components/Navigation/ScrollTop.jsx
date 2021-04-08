@@ -10,6 +10,7 @@ const scrollTopStyles = makeStyles((theme) => ({
     color: "#3fd2c7",
     fontSize: "20px",
     margin: "auto",
+
     
   },
 
@@ -20,6 +21,9 @@ const scrollTopStyles = makeStyles((theme) => ({
     position: "fixed",
     visibility: "show",
     margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+     right: "20px",
+    },
     
   },
 

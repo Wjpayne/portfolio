@@ -12,6 +12,9 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
 import ResumeLink from "@material-ui/core/Link";
+import { Switch } from "@material-ui/core";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
+import Brightness2Icon from "@material-ui/icons/Brightness2";
 
 const drawerWidth = 240;
 
@@ -29,7 +32,8 @@ const navStyles = makeStyles((theme) => ({
   menuButton: {
     color: "#2565ae",
     fontSize: "40px",
-    
+    position: "absolute",
+    left: "4em",
   },
 
   drawer: {
@@ -41,9 +45,8 @@ const navStyles = makeStyles((theme) => ({
   },
   drawerHeader: {
     alignItems: "center",
-  
+
     ...theme.mixins.toolbar,
-   
   },
 
   drawerTitle: {
@@ -62,6 +65,17 @@ const navStyles = makeStyles((theme) => ({
     },
   },
 
+  appBarDark: {
+    backgroundColor: "white",
+    transition: ".5s",
+    margin: "auto",
+    padding: "0",
+    position: "fixed",
+    [theme.breakpoints.down("sm")]: {
+      backgroundColor: "transparent",
+    },
+  },
+
   appBarBlack: {
     backgroundColor: "transparent",
     transition: ".5s",
@@ -69,19 +83,21 @@ const navStyles = makeStyles((theme) => ({
     padding: "0",
     overflow: "hidden",
     position: "fixed",
-    [theme.breakpoints.down("sm")]: {},
+    [theme.breakpoints.down("sm")]: {
+    
+
+    },
   },
 
   navButton: {
     color: "white",
-    visibility: "hidden",
+    display: "none",
     width: "100%",
     margin: "auto",
   },
 
   navButtonAppear: {
     color: "#2565ae",
-    visibility: "show",
     fontFamily: "Montserrat Subrayada",
     fontSize: "20px",
     transition: ".7s",
@@ -93,7 +109,8 @@ const navStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar() {
+export default function NavBar(props) {
+  const { darkState, handleThemeChange } = props;
   //styling
   const classes = navStyles();
 
@@ -164,6 +181,20 @@ export default function NavBar() {
       <Paper className={classes.root}>
         <AppBar elevation={0} className={classes[navRef.current]}>
           <Toolbar>
+            <WbSunnyIcon style={{ color: "yellow", fontSize: "40px" }} />
+            <Switch
+              className={classes.switch}
+              checked={darkState}
+              onChange={handleThemeChange}
+              color="secondary"
+            />
+            <Brightness2Icon
+              style={
+                darkState
+                  ? { color: "#989898", fontSize: "40px" }
+                  : { color: "black", fontSize: "40px" }
+              }
+            />
             <Button
               component={Link}
               to={"/#AboutMe"}

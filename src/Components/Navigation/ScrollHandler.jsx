@@ -9,7 +9,7 @@ const ScrollHandler = ({ location }) => {
     setTimeout(() => {
       window.scrollTo({
         behavior: element ? "smooth" : "smooth",
-        top: element ? element.offsetTop : 0
+        top: element ? element.offsetTop : 0,
       });
     }, 100);
   }, [location]);
@@ -19,8 +19,8 @@ const ScrollHandler = ({ location }) => {
 
 ScrollHandler.propTypes = {
   location: PropTypes.shape({
-    hash: PropTypes.string
-  }).isRequired
+    hash: PropTypes.string,
+  }).isRequired,
 };
 
 export default withRouter(ScrollHandler);
